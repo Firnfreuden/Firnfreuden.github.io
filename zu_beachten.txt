@@ -3,3 +3,17 @@
 - 5-6 Nachkommastellen reichen beim GeoJSON
 - wenn gar nichts hilft: TopoJSON
 
+
+- in Bericht nur das detailliert hinschreiben, was wir nicht gemeinsam gemacht haben
+- Präsentation entweder hochladen oder nur websites herzeigen (15-20 min)
+
+- zum verlinken der Einzelseiten:
+    - startseite: index.html
+    - teamseite: team.html (gleicher ordner)
+    - main.css  (in html verlinken: <link "stylesheet" usw.)
+    - in Unterordner Karte 1: index.html --> wenn ich darauf aucch das stylesheet vom Hauptbereich haben will: 
+        <link rel="stylesheet" href="../main.css"> so geht man einen Ordner zurück und nimmt das gleiche Stylesheet
+    - für Verlinkung von Kartenseite zur Startseite: <a href="../index.html">Startseite</a>
+    - für Link zur Karte auf Startseite: <a href="karte1/index.html">Karte</a>
+
+Abgabe Bericht am Mi, 26.6. (1 Tag vor Präsentation)
