@@ -1,0 +1,5 @@
+- GeoJSON Daten müssen immer geographische Koordinaten als Projektion (EPSG:4326) haben
+- Spalten mit Attributen, die wir nicht brauchen, rauslöschen im GIS, bevor wir GeoJSON draus machen
+- 5-6 Nachkommastellen reichen beim GeoJSON
+- wenn gar nichts hilft: TopoJSON
+
