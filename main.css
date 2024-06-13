@@ -11,7 +11,7 @@ body {
 
 /* styling der Links */
 a {
-    color: rgb(89, 70, 70);
+    color: rgb(69, 80, 91);
 }
 
 main {
@@ -22,7 +22,7 @@ main {
 header {
     padding: 1em;
     text-align: center;
-    background: #d5aabf57;
+    background: #6c93b357;
     color: rgb(10, 0, 0);
     font-size: 15px;
 }
