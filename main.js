@@ -16,13 +16,12 @@ let map = L.map("map", {
 // thematische Layer
 let themaLayer = {
     route: L.featureGroup(),
+    temperature: L.featureGroup(),
+    schnee: L.featureGroup(),
 }
 
 // WMTS Hintergrundlayer der eGrundkarte Tirol
 let eGrundkarteTirol = {
-    sommer: L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
-        attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
-    }),
     winter: L.tileLayer(
         "https://wmts.kartetirol.at/gdi_winter/{z}/{x}/{y}.png", {
         attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
@@ -39,10 +38,10 @@ let eGrundkarteTirol = {
 
 // Hintergrundlayer eGrundkarte Tirol mit GPX-Route overlay
 L.control.layers({
-    "eGrundkarte Tirol Sommer": L.layerGroup([
-        eGrundkarteTirol.sommer,
-        eGrundkarteTirol.nomenklatur
-    ]).addTo(map),
+    "Relief avalanche.report": L.tileLayer(
+        "https://static.avalanche.report/tms/{z}/{x}/{y}.webp", {
+        attribution: `© <a href="https://sonny.4lima.de">Sonny</a>, <a href="https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b">EU-DEM</a>, <a href="https://lawinen.report/">avalanche.report</a>, all licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`
+    }).addTo(map),
     "eGrundkarte Tirol Winter": L.layerGroup([
         eGrundkarteTirol.winter,
         eGrundkarteTirol.nomenklatur
@@ -52,7 +51,9 @@ L.control.layers({
         eGrundkarteTirol.nomenklatur,
     ])
 }, {
-    "GPX-Route": themaLayer.route.addTo(map)
+    "Temperatur [°C]": themaLayer.temperature,
+    "Schneehöhe [cm]": themaLayer.schnee,
+    "GPX-Route": themaLayer.route
 }).addTo(map);
 
 // Maßstab
