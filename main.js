@@ -20,6 +20,7 @@ let themaLayer = {
     route: L.featureGroup(),
     temperature: L.featureGroup(),
     schnee: L.featureGroup(),
+    forecast
 }
 
 // WMTS Hintergrundlayer der eGrundkarte Tirol
@@ -57,7 +58,9 @@ L.control.layers({
     "Temperatur [°C]": themaLayer.temperature,
     "Wind [km/h]": themaLayer.wind,
     "Schneehöhe [cm]": themaLayer.schnee,
-    "GPX-Route": themaLayer.route
+    "GPX-Route": themaLayer.route,
+    "Wettervorhersage MET Norway": themaLayer.forecast,
+    "ECMWF Windvorhersage": themaLayer.wind,
 }).addTo(map);
 
 // Change default options
@@ -81,10 +84,90 @@ let controlElevation = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 200,
-    theme: "bike-tirol",
+    theme: "skitouren",
 }).addTo(map);
 controlElevation.load("data/etappe27.gpx");
 
+// Wettervorhersage MET Norway
+async function showForecast(url) {
+    let response = await fetch(url);
+    let jsondata = await response.json();
+
+    // aktuelles Wetter und Wettervorhersage implementieren
+    console.log(jsondata);
+    L.geoJSON(jsondata, {
+        pointToLayer: function (feature, latlng) {
+            let details = feature.properties.timeseries[0].data.instant.details;
+            let time = new Date(feature.properties.timeseries[0].time);
+
+
+            let content = `
+            <h4>Wettervorhersage für ${time.toLocaleString()} </h4>
+            <ul>
+                <li> Luftdruck (hPa): ${details.air_pressure_at_sea_level}</li>
+                <li> Lufttemperatur (°C): ${details.air_temperature}</li>
+                <li> Bewölkungsgrad (%): ${details.cloud_area_fraction} </li>
+                <li> Luftfeuchtigkeit (%): ${details.relative_humidity}</li>
+                <li> Windrichtung (°): ${details.wind_from_direction}</li>
+                <li> Windgeschwindigkeit (km/h): ${Math.round(details.wind_speed * 3.6)}</li>
+            </ul>
+            `;
+
+            for (let i = 0; i <= 24; i += 3) {
+                let symbol = feature.properties.timeseries[i].data.next_1_hours.summary.symbol_code;
+                let time = new Date(feature.properties.timeseries[i].time);
+                content += `<img src="icons/${symbol}.svg" alt="${symbol}" style="width:32px" title="${time.toLocaleString()}">`;
+            }
+
+            //link zum Datendownload
+            content += `
+            <p><a href="${url}" target="met.no">Daten zum downloaden</a></p>
+            `;
+            L.popup(latlng, {
+                content: content
+            }).openOn(themaLayer.forecast);
+        }
+    }).addTo(themaLayer.forecast);
+}
+//showForecast("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=47.267222&lon=11.392778");
+
+// auf Kartenklick reagieren
+map.on("click", function (evt) {
+    showForecast(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${evt.latlng.lat}&lon=${evt.latlng.lng}`);
+})
+
+// klick auf Innsbruck simulieren
+map.fire("click", {
+    latlng: ibk
+});
+
+// Funktion für Windkarte
+async function loadWind(url) {
+    const response = await fetch(url);
+    const jsondata = await response.json();
+    L.velocityLayer({
+        data: jsondata,
+        lineWidth: 2,
+        displayOptions: {
+            directionString: "Windrichtung",
+            speedString: "Windgeschwindigkeit",
+            speedUnit: "k/h",
+            position: "bottomright",
+            velocityType: "",
+        }
+    }).addTo(themaLayer.wind);
+
+
+    //vorhersagezeitpunkt ermitteln
+    let forecastDate = new Date(jsondata[0].header.refTime);
+    forecastDate.setHours(forecastDate.getHours() + jsondata[0].header.forecastTime);
+
+    document.querySelector("#forecast-date").innerHTML = `
+    (<a href="${url}" target="met.no"> Stand${forecastDate.toLocaleString()}</a>)
+    `;
+
+}
+loadWind("https://geographie.uibk.ac.at/data/ecmwf/data/wind-10u-10v-europe.json");
 
 // Adding MiniMap
 let osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -92,14 +175,11 @@ let osmAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenSt
 let osm2 = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 13, attribution: osmAttrib });
 let miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
-/////
 
 
 //funktion farben
 function getColor(value, ramp) {
-    //console.log("getColor: value: ", value, "ramp:", ramp);
     for (let rule of ramp) {
-        //console.log("Rule:", rule);
         if (value >= rule.min && value < rule.max) {
             return rule.color;
         }
@@ -111,7 +191,6 @@ function getColor(value, ramp) {
 function showTemperature(geojson) {
     L.geoJSON(geojson, {
         filter: function (feature) {
-            //feature.properties.LT
             if (feature.properties.LT > -50 && feature.properties.LT < 50) {
                 return true;
             }
@@ -132,7 +211,6 @@ function showTemperature(geojson) {
 function showWind(geojson) {
     L.geoJSON(geojson, {
         filter: function (feature) {
-            //feature.properties.WG
             if (feature.properties.WG > 0 && feature.properties.WG < 250) {
                 return true;
             }
@@ -153,7 +231,6 @@ function showWind(geojson) {
 function showSnow(geojson) {
     L.geoJSON(geojson, {
         filter: function (feature) {
-            //feature.properties.HS
             if (feature.properties.HS > 0 && feature.properties.HS < 800) {
                 return true;
             }
