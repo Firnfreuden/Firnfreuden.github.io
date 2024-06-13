@@ -27,12 +27,12 @@ header {
     font-size: 15px;
 }
 
-header nav {
+/* header nav {
     text-align: center;
     font-size: 0.9em;
     font-weight: bold;
     padding-top: 1em;
-}
+} */
 
 .nav-badge {
     display: inline-block;
@@ -43,6 +43,13 @@ header nav {
     background-color: rgba(47, 100, 179, 0.2);
 }
 
+.nav-github {
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
 article {
     margin-top: 0.5em;
 }
@@ -51,6 +58,33 @@ article {
     width: 100%;
     height: 85vh;
     border: 1px solid gray;
+}
+
+.aws-div-icon span {
+    border: 1px solid silver;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.3em;
+    text-shadow:
+        -1px -1px 0 white,
+        -1px 1px 0 white,
+        1px -1px 0 white,
+        1px 1px 0 white;
+    display: inline-block;
+    transform: translate(-30%, -50%);
+}
+
+.aws-div-icon-wind span {
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 0.3em;
+    text-shadow:
+        -1px -1px 0 black,
+        -1px 1px 0 black,
+        1px -1px 0 black,
+        1px 1px 0 black;
+    display: inline-block;
+    transform: translate(-30%, -50%);
 }
 
 footer {
