@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Firnfreuden</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <!-- Leaflet Providers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Leaflet FullScreen -->
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
+
+    <!-- leaflet-elevation -->
+    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
+    <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
+
+    <!-- Leaflet Minimap -->
+    <link rel="stylesheet" href="data/Control.MiniMap.css" />
+    <script src="data/Control.MiniMap.min.js" type="text/javascript"></script>
+
+
+    <!-- eigene Stile und Hauptskript -->
+    <link rel="stylesheet" href="main.css">
+    <script src="etappen.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Firnfreuden<h1>
+                    <h2></i>Karten mit Infos zu Bedingungen und Tourenvorschläge</h2>
+                    <nav>
+                        <i class="fab fa-github"></i> <a
+                            href="https://github.com/Firnfreuden/Firnfreuden.io/">Github</a>
+                    </nav>
+        </header>
+        <article>
+            <h1><a href=""></a>Etappe 27: Imst - Venetalm - Wenns</h1>
+            <p>Von Imst aus startet diese als schwer eingestufte Etappe und verbindet das Inntal mit dem Pitztal.
+                Höhepunkt auf dieser Strecke – im wahrsten Sinne des Wortes wie auch in der Herausforderung – ist die
+                knapp unter 2.000 Metern gelegene Venetalm, die Sie über eine steil ansteigende Schotterstraße
+                erreichen. Dafür belohnt die Tour mit einem herrlichen Rundblick.</p>
+
+            <div class="summary">
+                <div class="summary-badge">
+                    <i class="fas fa-walking"></i> 22 km
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-clock"></i> 5 h
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-sort-amount-up-alt"></i> 1290 m
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-mountain"></i> Höchster Punkt: 1980 m
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-sort-amount-down-alt"></i> 965 m
+                </div>
+                <div class="summary-badge">
+                    <i class="fa-solid fa-heart-pulse"></i> schwierig
+                </div>
+                <div class="summary-badge">
+                    <i class="fas fa-download"></i> <a href="data/etappe27.gpx">Download GPX</a>
+                </div>
+            </div>
+
+            <select id="pulldown">
+            </select>
+
+
+            <div id="map"></div>
+            <div id="profile"></div>
+
+            <h3>Streckenbeschreibung</h3>
+            <p>Kurz nach der Kirche biegt man in südwestlicher Richtung in eine Nebenstraße ab und radelt auf dieser ca.
+                400 Meter bis zur Abzweigung Brennbichl (bei Supermarkt). Nun geht es zum Inntalradweg (620) und auf
+                diesem durch das Gewerbegebiet, später kurz auf der Straße über Inn und Autobahn nach Imst Au, von wo
+                aus der Anstieg beginnt. Auf der asphaltierten Straße geht es durch Imsterberg. Von nun an folgt man
+                immer den Wegweisern „Venetalm“ (604). Nach einigen Kehren im Wald erreicht man den lang gezogenen
+                Bergrücken mit der herrlich gelegenen Venetalm (ca. 4 Stunden ab Imst). Von der Alm fährt man auf dem
+                gleichen Weg etwa 200 Meter zurück und zweigt dann rechts Richtung Wenns (640) ab. In Folge hält man
+                sich immer an den gelben Wegweisern nach Wenns (1 Stunde ab der Venetalm).</p>
+
+        </article>
+        <footer>
+            <strong>Datenquellen:</strong>
+            <nav>
+                <a href="https://www.tirol.at/reisefuehrer/sport/mountainbiken/bike-trail-tirol">Bike Trail Tirol
+                    (Online Reiseführer Tirol)</a> |
+                <a href="https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-bike-trail-tirol-imst-venetalm-wenns"
+                    target="_blank">
+                    Etappe 27: Imst - Venetalm - Wenns</a> |
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte
+                    Tirol</a>
+            </nav>
+        </footer>
+    </main>
+</body>
+
+</html>
