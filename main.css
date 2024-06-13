@@ -79,6 +79,17 @@ article {
     transform: translate(-30%, -50%);
 }
 
+#profile {
+    margin-top: 0.3em;
+    border: 1px solid #6c93b357;
+
+}
+
+.skitouren {
+    --ele-area: rgb(38, 66, 38);
+    --ele-bg: rgb(248, 248, 248);
+}
+
 footer {
     font-family: "Roboto", sans-serif;
     font-size: 0.9em;
