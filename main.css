@@ -28,26 +28,20 @@ header {
 }
 
 header nav {
-    display: inline-block;
-    padding: 0.4em;
-    border: 1px solid silver;
-    border-radius: 10px;
-    margin-right: 0.5em;
-    background-color: rgba(65, 137, 44, 0.2);
     text-align: center;
     font-size: 0.9em;
     font-weight: bold;
     padding-top: 1em;
 }
 
-/* .summary-badge {
+.nav-badge {
     display: inline-block;
     padding: 0.4em;
     border: 1px solid silver;
     border-radius: 10px;
     margin-right: 0.5em;
     background-color: rgba(65, 137, 44, 0.2);
-} */
+}
 
 article {
     margin-top: 0.5em;
