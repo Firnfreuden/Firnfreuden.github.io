@@ -1,49 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firnfreuden</title>
 
-    <!-- eigene Stile und Hauptskript -->
-    <link rel="stylesheet" href="main.css">
-    <script defer src="main.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Firnfreuden</title>
 
-    <!-- Leaflet FullScreen -->
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+        <!-- eigene Stile und Hauptskript -->
+        <link rel="stylesheet" href="main.css">
+        <script defer src="main.js"></script>
+
+        <!-- Leaflet FullScreen -->
+        <script
+            src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+            rel='stylesheet' />
 
 
-</head>
+    </head>
 
 
-<body>
-    <main>
-        <header>
-            <h1>Firnfreuden</h1>
-            <h2>Eine Planungsunterstützung für Frühjahrsskitouren</h2>
-            <h3>Johanna Mascher, Amelie Singler, Sophie Stoffl</h3>
-            <nav>
-                <a href="konzept.pdf">Link zum Konzept</a>
-                <a href="map.html">zur Karte mit Frühjahrsskitouren</a>
-                <a href="Skitouren Beschreibungen/index.html">Sammlung von Frühjahrsskitouren in Tirol</a>
-                <i class="fab fa-github"></i> <a href="https://github.com/Firnfreuden/Firnfreuden.github.io/">Github</a>
-            </nav>
-        </header>
+    <body>
+        <main>
+            <header>
+                <h1>Firnfreuden</h1>
+                <h2>Eine Planungsunterstützung für Frühjahrsskitouren</h2>
+                <h3>Johanna Mascher, Amelie Singler, Sophie Stoffl</h3>
+                <nav>
+                    <div class="navigation">
+                        <div class="nav-badge">
+                            <a href="konzept.pdf">Link zum Konzept</a>
+                        </div>
 
-        <article>
-            <p>Dieses Portal soll bei der Planung von Frühjahrsskitouren unterstützen.
-            Auf der interaktiven Karte ist eine Übersicht über verschiedene Frühjahrsskitouren in Tirol zu finden.
-            Außerdem ... </p>
- 
-        </article>
-        <footer>
-            <strong>Datenquellen:</strong>
-            <nav>
-                <a href="https://lawinen.report/">Lawinen.report</a> |
-                <a href="https://static.avalanche.report/weather_stations/stations.geojson">GeoJSON Daten</a> |
-                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol">Metadaten</a>
-            </nav>
+                        <div class="nav-badge">
+                            <a href="map.html">zur Karte mit Frühjahrsskitouren</a>
+                        </div>
+
+                        <div class="nav-badge">
+                            <a href="Skitouren Beschreibungen/index.html">Sammlung von Frühjahrsskitouren in Tirol</a>
+                        </div>
+
+                        <a href="Skitouren Beschreibungen/index.html">Sammlung von Frühjahrsskitouren in Tirol</a>
+                    </div>
+                    </div>
+                    <i class="fab fa-github"></i> <a
+                        href="https://github.com/Firnfreuden/Firnfreuden.github.io/">Github</a>
+                </nav>
+            </header>
+
+            <article>
+                <p>Dieses Portal soll bei der Planung von Frühjahrsskitouren unterstützen.
+                    Auf der interaktiven Karte ist eine Übersicht über verschiedene Frühjahrsskitouren in Tirol zu
+                    finden.
+                    Außerdem ... </p>
+
+            </article>
+            <footer>
+                <strong>Datenquellen:</strong>
+                <nav>
+                    <a href="https://lawinen.report/">Lawinen.report</a> |
+                    <a href="https://static.avalanche.report/weather_stations/stations.geojson">GeoJSON Daten</a> |
+                    <a
+                        href="https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol">Metadaten</a>
+                </nav>
 
             </footer>
 
