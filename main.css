@@ -27,12 +27,12 @@ header {
     font-size: 15px;
 }
 
-header nav {
+/* header nav {
     text-align: center;
     font-size: 0.9em;
     font-weight: bold;
     padding-top: 1em;
-}
+} */
 
 .nav-badge {
     display: inline-block;
@@ -44,7 +44,7 @@ header nav {
 }
 
 .nav-github {
-    text-align: center;
+    text-align: right;
     font-size: 0.9em;
     font-weight: bold;
     padding-top: 1em;
