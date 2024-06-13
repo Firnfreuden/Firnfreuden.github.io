@@ -15,6 +15,8 @@ let map = L.map("map", {
 
 // thematische Layer
 let themaLayer = {
+    stations: L.featureGroup(),
+    wind: L.featureGroup(),
     route: L.featureGroup(),
     temperature: L.featureGroup(),
     schnee: L.featureGroup(),
@@ -51,7 +53,9 @@ L.control.layers({
         eGrundkarteTirol.nomenklatur,
     ])
 }, {
+    "Wetterstationen": themaLayer.stations,
     "Temperatur [°C]": themaLayer.temperature,
+    "Wind [km/h]": themaLayer.wind,
     "Schneehöhe [cm]": themaLayer.schnee,
     "GPX-Route": themaLayer.route
 }).addTo(map);
