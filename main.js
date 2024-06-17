@@ -9,7 +9,7 @@ let ibk = {
 // Karte initialisieren
 let map = L.map("map", {
     fullscreenControl: true
-}).setView([ibk.lat, ibk.lng], 9);
+}).setView([ibk.lat, ibk.lng], 15);
 
 
 
@@ -20,7 +20,7 @@ let themaLayer = {
     route: L.featureGroup(),
     temperature: L.featureGroup(),
     schnee: L.featureGroup(),
-    forecast
+    forecast: L.featureGroup(),
 }
 
 // WMTS Hintergrundlayer der eGrundkarte Tirol
@@ -44,11 +44,11 @@ L.control.layers({
     "Relief avalanche.report": L.tileLayer(
         "https://static.avalanche.report/tms/{z}/{x}/{y}.webp", {
         attribution: `© <a href="https://sonny.4lima.de">Sonny</a>, <a href="https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b">EU-DEM</a>, <a href="https://lawinen.report/">avalanche.report</a>, all licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`
-    }).addTo(map),
+    }),
     "eGrundkarte Tirol Winter": L.layerGroup([
         eGrundkarteTirol.winter,
         eGrundkarteTirol.nomenklatur
-    ]),
+    ]).addTo(map),
     "eGrundkarte Tirol Orthofoto": L.layerGroup([
         eGrundkarteTirol.ortho,
         eGrundkarteTirol.nomenklatur,
@@ -86,7 +86,7 @@ let controlElevation = L.control.elevation({
     height: 200,
     theme: "skitouren",
 }).addTo(map);
-controlElevation.load("data/etappe27.gpx");
+controlElevation.load("Skitouren Beschreibungen/gpx/glockturm.gpx", "Skitouren Beschreibungen/gpx/liebener_spitze.gpx");
 
 // Wettervorhersage MET Norway
 async function showForecast(url) {
@@ -136,11 +136,6 @@ map.on("click", function (evt) {
     showForecast(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${evt.latlng.lat}&lon=${evt.latlng.lng}`);
 })
 
-// klick auf Innsbruck simulieren
-map.fire("click", {
-    latlng: ibk
-});
-
 // Funktion für Windkarte
 async function loadWind(url) {
     const response = await fetch(url);
@@ -168,6 +163,7 @@ async function loadWind(url) {
 
 }
 loadWind("https://geographie.uibk.ac.at/data/ecmwf/data/wind-10u-10v-europe.json");
+
 
 // Adding MiniMap
 let osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
