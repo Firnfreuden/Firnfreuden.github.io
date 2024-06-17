@@ -9,7 +9,7 @@ let ibk = {
 // Karte initialisieren
 let map = L.map("map", {
     fullscreenControl: true
-}).setView([ibk.lat, ibk.lng], 15);
+}).setView([ibk.lat, ibk.lng], 5);
 
 
 
