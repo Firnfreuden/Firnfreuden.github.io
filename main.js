@@ -86,7 +86,29 @@ let controlElevation = L.control.elevation({
     height: 200,
     theme: "skitouren",
 }).addTo(map);
-controlElevation.load("Skitouren Beschreibungen/gpx/glockturm.gpx", "Skitouren Beschreibungen/gpx/liebener_spitze.gpx");
+
+//gpx dateien laden und zur karte hinzufügen
+fetch("Skitouren Beschreibungen/gpx/glockturm.gpx")
+    .then(response => response.text())
+    .then(gpxData => {
+        let gpxLayer = new L.GPX(gpxData, {
+            async: true
+        }).on('loaded', function (e) {
+            map.fitBounds(e.target.getBounds());
+        }).addTo(map);
+        controlElevation.load("Skitouren Beschreibungen/gpx/glockturm.gpx");
+    });
+fetch("Skitouren Beschreibungen/gpx/liebener_spitze.gpx")
+    .then(response => response.text())
+    .then(gpxData => {
+        let gpxLayer = new L.GPX(gpxData, {
+            async: true
+        }).on('loaded', function (e) {
+            map.fitBounds(e.target.getBounds());
+        }).addTo(map);
+        controlElevation.load("Skitouren Beschreibungen/gpx/liebener_spitze.gpx");
+    });
+
 
 // Wettervorhersage MET Norway
 async function showForecast(url) {
