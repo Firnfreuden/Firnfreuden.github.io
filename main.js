@@ -80,35 +80,53 @@ L.control.scale({
     imperial: false,
 }).addTo(map);
 
-let controlElevation = L.control.elevation({
+
+// GPX Dateien laden und zur Karte hinzufügen
+/* let controlElevation = L.control.elevation({
     time: false,
     elevationDiv: "#profile",
     height: 200,
     theme: "skitouren",
-}).addTo(map);
+}).addTo(themaLayer.route);
+controlElevation.load("/Skitouren Beschreibungen/gpx/glockturm.gpx"); */
 
-//gpx dateien laden und zur karte hinzufügen
-fetch("Skitouren Beschreibungen/gpx/glockturm.gpx")
-    .then(response => response.text())
-    .then(gpxData => {
-        let gpxLayer = new L.GPX(gpxData, {
-            async: true
+
+// GPX-Dateien laden und zur Karte hinzufügen
+function initMap() {
+    let gpxfiles = [
+        '/Skitouren Beschreibungen/gpx/glockturm.gpx',
+        '/Skitouren Beschreibungen/gpx/laengentaler_weißerkogel.gpx',
+        '/Skitouren Beschreibungen/gpx/liebener_spitze.gpx',
+        '/Skitouren Beschreibungen/gpx/luesener_fernerkogel_und_spitze.gpx'
+    ];
+
+    let gpxLayers = [];
+
+    gpxfiles.forEach((gpxfile, index) => {
+        let gpxLayer = new L.GPX(gpxfile, {
+            async: true,
+            polyline_options: {
+                color: "yellow",
+                weight: 3,
+                opacity: 0.75
+            }
         }).on('loaded', function (e) {
             map.fitBounds(e.target.getBounds());
-        }).addTo(map);
-        controlElevation.load("Skitouren Beschreibungen/gpx/glockturm.gpx");
-    });
-fetch("Skitouren Beschreibungen/gpx/liebener_spitze.gpx")
-    .then(response => response.text())
-    .then(gpxData => {
-        let gpxLayer = new L.GPX(gpxData, {
-            async: true
-        }).on('loaded', function (e) {
-            map.fitBounds(e.target.getBounds());
-        }).addTo(map);
-        controlElevation.load("Skitouren Beschreibungen/gpx/liebener_spitze.gpx");
+        });
+        gpxLayers.push(gpxLayer);
     });
 
+    let overlays = {
+        "Glockturm ": gpxLayers[0],
+        "Längentaler Weißerkogel ": gpxLayers[1],
+        "Liebener Spitze ": gpxLayers[2],
+        "Lüsener Fernerkogel und Spitze ": gpxLayers[3]
+    };
+
+    L.control.layers(null, overlays, {
+        collapsed: false
+    }).addTo(map);
+}
 
 // Wettervorhersage MET Norway
 async function showForecast(url) {
@@ -305,3 +323,5 @@ async function showStations(url) {
 
 }
 showStations("https://static.avalanche.report/weather_stations/stations.geojson");
+
+
