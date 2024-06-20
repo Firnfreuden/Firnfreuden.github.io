@@ -55,6 +55,36 @@ article {
     margin-top: 0.5em;
 }
 
+/* Entfernt Standard-Aufzählungspunkte */
+.custom-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Stellt sicher, dass die Icons und der Text in einer Zeile sind */
+.custom-list li {
+    margin: 10px 0;
+}
+
+/* Stellt sicher, dass das Icon und der Text nebeneinander angezeigt werden */
+.custom-list li a {
+    text-decoration: none;
+    color: rgb(69, 80, 91);
+    font-size: 16px;
+}
+
+/* Abstand zwischen Icon und Text */
+.custom-list li a i {
+    margin-right: 10px;
+    /* Abstand zwischen Icon und Text */
+}
+
+.inline {
+    display: inline-block;
+    margin-left: 10px;
+    /* Optional: fügt Abstand zwischen dem Text und dem Icon hinzu */
+}
+
 #map {
     width: 100%;
     height: 85vh;
