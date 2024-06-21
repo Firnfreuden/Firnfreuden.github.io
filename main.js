@@ -93,6 +93,7 @@ L.control.scale({
 }).addTo(map);
 
 
+// GPX Tracks mit leaflet omnivore hinzufpgen
 omnivore.gpx('/Skitouren Beschreibungen/gpx/hinterer_daunkopf_ueberschreitung.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/gabler.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/großglockner.gpx').addTo(themaLayer.routes);
@@ -102,6 +103,8 @@ omnivore.gpx('/Skitouren Beschreibungen/gpx/laengentaler_weisserkogel.gpx').addT
 omnivore.gpx('/Skitouren Beschreibungen/gpx/luesener_fernerkogel_und_spitze.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/scheiberkogel.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/zischgenscharte.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/reichenspitze.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/ruderhofspitze.gpx').addTo(themaLayer.routes);
 //omnivore.gpx('/Skitouren Beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
 
 // GPX Dateien laden und zur Karte hinzufügen
