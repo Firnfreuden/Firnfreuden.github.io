@@ -79,10 +79,10 @@ L.control.layers({
 L.control.rainviewer({
     position: 'bottomleft',
     nextButtonText: '>',
-    playStopButtonText: 'Play/Stop',
+    playStopButtonText: 'Start/Stop',
     prevButtonText: '<',
-    positionSliderLabelText: "Hour:",
-    opacitySliderLabelText: "Opacity:",
+    positionSliderLabelText: "Zeit:",
+    opacitySliderLabelText: "Deckkraft:",
     animationInterval: 500,
     opacity: 0.5
 }).addTo(map);
@@ -105,7 +105,7 @@ omnivore.gpx('/Skitouren Beschreibungen/gpx/scheiberkogel.gpx').addTo(themaLayer
 omnivore.gpx('/Skitouren Beschreibungen/gpx/zischgenscharte.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/reichenspitze.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/ruderhofspitze.gpx').addTo(themaLayer.routes);
-//omnivore.gpx('/Skitouren Beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
 
 // GPX Dateien laden und zur Karte hinzufügen
 /* let controlElevation = L.control.elevation({
