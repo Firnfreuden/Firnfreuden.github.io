@@ -19,3 +19,5 @@
 Abgabe Bericht am Mi, 26.6. (1 Tag vor Präsentation)
 
 Breite Bilder in Skitouren Sammlung: 1000 (in GIMP)
+Bilder dann so benennen: gipfelname.gpx
+Gpx-Dateien immer so benennen: gipfelname.gpx
