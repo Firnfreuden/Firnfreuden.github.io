@@ -6,11 +6,21 @@ let ibk = {
     lng: 11.392778
 };
 
+// Tirol
+let tirol = {
+    lat: 47.253,
+    lng: 11.601
+};
+
 // Karte initialisieren
 let map = L.map("map", {
     fullscreenControl: true
-}).setView([ibk.lat, ibk.lng], 5);
+}).setView([tirol.lat, tirol.lng], 9);  // je nach Zoomstufe größerer oder kleinerer Ausschnitt von Tirol zu sehen
 
+// Marker für Ibk zur Orientierung
+L.marker([ibk.lat, ibk.lng]).addTo(map)
+    .bindPopup("Innsbruck")
+//.openPopup();
 
 
 // thematische Layer
@@ -83,16 +93,16 @@ L.control.scale({
 }).addTo(map);
 
 
-omnivore.gpx('/Skitouren Beschreibungen/gpx/daunkopf_johanna.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/gabler_johanna.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/großglockner_johanna.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/hinterer_daunkopf_ueberschreitung.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/gabler.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/großglockner.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/innere_sommerwand.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/kleiner_kaserer.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/laengentaler_weisserkogel.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/luesener_fernerkogel.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/scheiberkogel_johanna.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/zischgenscharte_johanna.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/luesener_fernerkogel_und_spitze.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/scheiberkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/zischgenscharte.gpx').addTo(themaLayer.routes);
+//omnivore.gpx('/Skitouren Beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
 
 // GPX Dateien laden und zur Karte hinzufügen
 /* let controlElevation = L.control.elevation({
