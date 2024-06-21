@@ -60,7 +60,6 @@ L.control.layers({
     "Temperatur [°C]": themaLayer.temperature,
     "Wind [km/h]": themaLayer.wind,
     "Schneehöhe [cm]": themaLayer.schnee,
-    "GPX-Route": themaLayer.route,
     "Wettervorhersage MET Norway": themaLayer.forecast,
     "ECMWF Windvorhersage": themaLayer.wind,
     "Skitouren": themaLayer.routes,
@@ -84,6 +83,17 @@ L.control.scale({
 }).addTo(map);
 
 
+omnivore.gpx('/Skitouren Beschreibungen/gpx/daunkopf_johanna.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/gabler_johanna.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/großglockner_johanna.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/innere_sommerwand.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/kleiner_kaserer.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/laengentaler_weisserkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/luesener_fernerkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/scheiberkogel_johanna.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/Skitouren Beschreibungen/gpx/zischgenscharte_johanna.gpx').addTo(themaLayer.routes);
+
 // GPX Dateien laden und zur Karte hinzufügen
 /* let controlElevation = L.control.elevation({
     time: false,
@@ -95,7 +105,7 @@ controlElevation.load("/Skitouren Beschreibungen/gpx/glockturm.gpx"); */
 
 
 // GPX-Dateien laden und zur Karte hinzufügen
-function initMap() {
+/* function initMap() {
     let gpxfiles = [
         '/Skitouren Beschreibungen/gpx/glockturm.gpx',
         '/Skitouren Beschreibungen/gpx/laengentaler_weißerkogel.gpx',
@@ -129,7 +139,7 @@ function initMap() {
     L.control.layers(null, overlays, {
         collapsed: false
     }).addTo(map);
-}
+} */
 
 // Wettervorhersage MET Norway
 async function showForecast(url) {
