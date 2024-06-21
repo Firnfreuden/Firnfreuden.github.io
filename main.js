@@ -79,10 +79,10 @@ L.control.layers({
 L.control.rainviewer({
     position: 'bottomleft',
     nextButtonText: '>',
-    playStopButtonText: 'Play/Stop',
+    playStopButtonText: 'Start/Stop',
     prevButtonText: '<',
-    positionSliderLabelText: "Hour:",
-    opacitySliderLabelText: "Opacity:",
+    positionSliderLabelText: "Zeit:",
+    opacitySliderLabelText: "Deckkraft:",
     animationInterval: 500,
     opacity: 0.5
 }).addTo(map);
