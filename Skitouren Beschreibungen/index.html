@@ -1,434 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Firnfreuden Sammlung von Frühjahrsskitouren in Tirol</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firnfreuden Sammlung von Frühjahrsskitouren in Tirol</title>
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- eigene Stile und Hauptskript -->
-        <link rel="stylesheet" href="../main.css">
-        <script defer src="../main.js"></script>
+    <!-- eigene Stile und Hauptskript -->
+    <link rel="stylesheet" href="../main.css">
+    <script defer src="../main.js"></script>
 
-        <!-- Leaflet FullScreen -->
-        <script
-            src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
-            rel='stylesheet' />
+    <!-- Leaflet FullScreen -->
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
 
-    </head>
+</head>
 
-    <body id="top">
-        <main>
-            <header>
-                <nav>
-                    <div class="git">
-                        <div class="nav-github">
-                            <i class="fab fa-github"></i> <a
-                                href="https://github.com/Firnfreuden/Firnfreuden.io/">Github</a>
-                        </div>
+<body id="top">
+    <main>
+        <header>
+            <nav>
+                <div class="git">
+                    <div class="nav-github">
+                        <i class="fab fa-github"></i> <a
+                            href="https://github.com/Firnfreuden/Firnfreuden.io/">Github</a>
                     </div>
+                </div>
 
-                </nav>
-                <h1>Firnfreuden</h1>
-                <h2>Eine Planungsunterstützung für Frühjahrsskitouren</h2>
-                <h4>Johanna Mascher, Amelie Singler, Sophie Stoffl</h4>
-                <nav>
-                    <div class="navigation">
-                        <div class="nav-badge">
-                            <a href="../index.html"> Startseite</a>
-                        </div>
-                        <div class="nav-badge">
-                            <a href="../map.html">zur Karte mit Frühjahrsskitouren</a>
-                        </div>
-                        <div class="nav-badge-1">
-                            <a href="Skitouren Beschreibungen/index.html">Sammlung von Frühjahrsskitouren in Tirol</a>
-                        </div>
-                        <div class="nav-badge">
-                            <a href="../about_us/index.html">About us</a>
-                        </div>
-                        <div class="nav-badge">
-                            <a href="../konzept.pdf">Link zum Konzept</a>
-                        </div>
+            </nav>
+            <h1>Firnfreuden</h1>
+            <h2>Eine Planungsunterstützung für Frühjahrsskitouren</h2>
+            <h4>Johanna Mascher, Amelie Singler, Sophie Stoffl</h4>
+            <nav>
+                <div class="navigation">
+                    <div class="nav-badge">
+                        <a href="../index.html"> Startseite</a>
                     </div>
-                </nav>
-            </header>
+                    <div class="nav-badge">
+                        <a href="../map.html">zur Karte mit Frühjahrsskitouren</a>
+                    </div>
+                    <div class="nav-badge-1">
+                        <a href="Skitouren Beschreibungen/index.html">Sammlung von Frühjahrsskitouren in Tirol</a>
+                    </div>
+                    <div class="nav-badge">
+                        <a href="../about_us/index.html">About us</a>
+                    </div>
+                    <div class="nav-badge">
+                        <a href="../konzept.pdf">Link zum Konzept</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
 
-            <article>
-                <ul class="custom-list">
-                    <li><a href="#Sellrain"><i class="fa-solid fa-arrow-right"></i> Sellrain</a></li>
-                    <li><a href="#Kaunertal"><i class="fa-solid fa-arrow-right"></i> Kaunertal</a></li>
-                    <li><a href="#Ötztal"><i class="fa-solid fa-arrow-right"></i> Ötztal</a></li>
-                    <li><a href="#Pitztal"><i class="fa-solid fa-arrow-right"></i> Pitztal</a></li>
-                    <li><a href="#Zillertal"><i class="fa-solid fa-arrow-right"></i> Zillertal</a></li>
-                    <li><a href="#Stubai"><i class="fa-solid fa-arrow-right"></i> Stubai</a></li>
-                    <li><a href="#Brenner"><i class="fa-solid fa-arrow-right"></i> Wipptal und Brenner</a></li>
-                    <li><a href="#Tauern"><i class="fa-solid fa-arrow-right"></i> Hohe Tauern</a></li>
-                </ul>
+        <article>
+            <ul class="custom-list">
+                <li><a href="#Sellrain"><i class="fa-solid fa-arrow-right"></i> Sellrain</a></li>
+                <li><a href="#Kaunertal"><i class="fa-solid fa-arrow-right"></i> Kaunertal</a></li>
+                <li><a href="#Ötztal"><i class="fa-solid fa-arrow-right"></i> Ötztal</a></li>
+                <li><a href="#Pitztal"><i class="fa-solid fa-arrow-right"></i> Pitztal</a></li>
+                <li><a href="#Zillertal"><i class="fa-solid fa-arrow-right"></i> Zillertal</a></li>
+                <li><a href="#Stubai"><i class="fa-solid fa-arrow-right"></i> Stubai</a></li>
+                <li><a href="#Brenner"><i class="fa-solid fa-arrow-right"></i> Wipptal und Brenner</a></li>
+                <li><a href="#Tauern"><i class="fa-solid fa-arrow-right"></i> Hohe Tauern</a></li>
+            </ul>
 
-                <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
-                <h2 id="Sellrain" class="inline">Sellrain</h2>
+            <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
+            <h2 id="Sellrain" class="inline">Sellrain</h2>
 
-                <h3>Längentaler Weißerkogel (3.217 m)</h3>
-                <p>Der Längentaler Weißerkogel ist eine lange Skitour, bei der man aber in der Abfahrt für die Mühen
-                    belohnt wird! Besonders nach Neuschnee gut geeignet, wenn die meisten anderen Touren zu heikel sind.
-                    Lediglich der Gipfelhang ist deutlich steiler, aber auch ohne diesen hat man eine traumhafte Abfahrt
-                    vor sich.
+            <h3>Längentaler Weißerkogel (3.217 m)</h3>
+            <p>Der Längentaler Weißerkogel ist eine lange Skitour, bei der man aber in der Abfahrt für die Mühen
+                belohnt wird! Besonders nach Neuschnee gut geeignet, wenn die meisten anderen Touren zu heikel sind.
+                Lediglich der Gipfelhang ist deutlich steiler, aber auch ohne diesen hat man eine traumhafte Abfahrt
+                vor sich.
 
-                </p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe: 1.630 m</li>
-                    <li>Gipfelhöhe: 3.217 m</li>
-                    <li>Höhenmeter Aufstieg: 1.580 m</li>
-                    <li>Weglänge: 10 km</li>
-                    <li>Exposition: N, O</li>
-                    <li>Ausgangspunkt: Lüsens</li>
-                    <li>Anfahrt mit Öffis: eher nicht, Bus fährt nur nach Praxmar (Ankunft dort gegen 9 Uhr)</li>
-                </ul>
-                <figure>
-                    <img src="images/laengentaler_weißerkogel.jpg" alt="Blick auf ...">
-                    <figcaption>Sonnenaufgangsstimmung im unteren Bereich der Tour (<i class="fa-solid fa-camera"></i>
-                        Sophie Stoffl)
-                    </figcaption>
-                </figure>
+            </p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 1.630 m</li>
+                <li>Gipfelhöhe: 3.217 m</li>
+                <li>Höhenmeter Aufstieg: 1.580 m</li>
+                <li>Weglänge: 10 km</li>
+                <li>Exposition: N, O</li>
+                <li>Ausgangspunkt: Lüsens</li>
+                <li>Anfahrt mit Öffis: eher nicht, Bus fährt nur nach Praxmar (Ankunft dort gegen 9 Uhr)</li>
+            </ul>
+            <figure>
+                <img src="images/laengentaler_weißerkogel.jpg" alt="Blick auf ...">
+                <figcaption>Sonnenaufgangsstimmung im unteren Bereich der Tour (<i class="fa-solid fa-camera"></i>
+                    Sophie Stoffl)
+                </figcaption>
+            </figure>
 
-                <h3>Lüsener Fernerkogel (3.298 m) und Lüsener Spitze (3.231 m)</h3>
-                <p> Tolle Skitour auf den Lüsener Fernerkogel, der am Talende des Lüsenstals thront.
-                    Da der Aufsteig über die nordexponierte "Mauer" bis zum Lüsener Ferner schon ca. 1.100 Höhenmeter
-                    lang und gerade im unteren Bereich teils etwas mühsam ist, bietet es sich für ausdauernde
-                    Skitourengeher:innen an, vom Gletscher aus noch die Lüsener Spitze mitzunehmen.
-                    Im Aufstieg zur Lüsener Spitze steilt sich der Hang vom Gletscher weg immer mehr auf, die letzten
-                    steilen Meter bis zum Übergang auf den flacheren Südosthang werden meist ohne Ski begangen. Danach
-                    wird es wieder flacher und man kann den Rest des Gipfelanstieges mit Ski erklimmen.
-                    In der Querung von Lüsener Ferner zum Rotgratferner über die "Plattige Wand" ist eine sichere
-                    Skitechnik wichtig, da es hier steil abfällt.
-                    Skidepot macht man etwa 100 Höhenmeter unter dem Gipfel, dann geht es über schönes Blockgelände
-                    (1-2) auf den Gipfel.
+            <h3>Lüsener Fernerkogel (3.298 m) und Lüsener Spitze (3.231 m)</h3>
+            <p> Tolle Skitour auf den Lüsener Fernerkogel, der am Talende des Lüsenstals thront.
+                Da der Aufsteig über die nordexponierte "Mauer" bis zum Lüsener Ferner schon ca. 1.100 Höhenmeter
+                lang und gerade im unteren Bereich teils etwas mühsam ist, bietet es sich für ausdauernde
+                Skitourengeher:innen an, vom Gletscher aus noch die Lüsener Spitze mitzunehmen.
+                Im Aufstieg zur Lüsener Spitze steilt sich der Hang vom Gletscher weg immer mehr auf, die letzten
+                steilen Meter bis zum Übergang auf den flacheren Südosthang werden meist ohne Ski begangen. Danach
+                wird es wieder flacher und man kann den Rest des Gipfelanstieges mit Ski erklimmen.
+                In der Querung von Lüsener Ferner zum Rotgratferner über die "Plattige Wand" ist eine sichere
+                Skitechnik wichtig, da es hier steil abfällt.
+                Skidepot macht man etwa 100 Höhenmeter unter dem Gipfel, dann geht es über schönes Blockgelände
+                (1-2) auf den Gipfel.
 
-                </p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe: 1.630 m</li>
-                    <li>Gipfelhöhe: 3.298 m und 3.231 m</li>
-                    <li>Höhenmeter Aufstieg: m</li>
-                    <li>Weglänge: km</li>
-                    <li>Exposition: </li>
-                    <li>Ausgangspunkt: Lüsens</li>
-                    <li>Anfahrt mit Öffis: eher nicht, Bus fährt nur nach Praxmar (Ankunft dort gegen 9 Uhr)</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\luesener_fernerkogel_und_spitze.gpx">Download
-                            GPX-Track</a></li>
-                </ul>
-                <figure>
-                    <img src="images/luesener_spitze.jpg" alt="Blick auf die Lüsener Spitze">
-                    <figcaption>Blick auf die Lüsener Spitze vom Aufstieg in Richtung Lüsener Fernerkogel (<i
-                            class="fa-solid fa-camera"></i>
-                        Philip Lampe)
-                    </figcaption>
-                </figure>
+            </p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 1.630 m</li>
+                <li>Gipfelhöhe: 3.298 m und 3.231 m</li>
+                <li>Höhenmeter Aufstieg: m</li>
+                <li>Weglänge: km</li>
+                <li>Exposition: </li>
+                <li>Ausgangspunkt: Lüsens</li>
+                <li>Anfahrt mit Öffis: eher nicht, Bus fährt nur nach Praxmar (Ankunft dort gegen 9 Uhr)</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\luesener_fernerkogel_und_spitze.gpx">Download
+                        GPX-Track</a></li>
+            </ul>
+            <figure>
+                <img src="images/luesener_spitze.jpg" alt="Blick auf die Lüsener Spitze">
+                <figcaption>Blick auf die Lüsener Spitze vom Aufstieg in Richtung Lüsener Fernerkogel (<i
+                        class="fa-solid fa-camera"></i>
+                    Philip Lampe)
+                </figcaption>
+            </figure>
 
-                <h3>Zischgenscharte und Schöntalspitze (3.002 m) übers Westfahlenhaus</h3>
-                <p>Beschreibung</p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe: 1.630 m</li>
-                    <li>Gipfelhöhe: 3.003 m</li>
-                    <li>Höhenmeter Aufstieg: 1.400 m</li>
-                    <li>Weglänge: 9 km</li>
-                    <li>Exposition: S, SO</li>
-                    <li>Ausgangspunkt: Lüsens</li>
-                    <li>Anfahrt mit Öffis:</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\zischgenscharte.gpx">Download
-                            GPX-Track</a></li>
-                </ul>
-                <figure>
-                    <img src="images/zischgenscharte.jpg" alt="Amelie & Johanna auf Skitour"> 
-                    <figcaption>Amelie und Johanna im Aufstieg zum Westfalenhaus (<i class="fa-solid fa-camera"></i>
-                        Linnea Betz)
-                    </figcaption>
-                </figure>
+            <h3>Zischgenscharte und Schöntalspitze (3.002 m) übers Westfahlenhaus</h3>
+            <p>Beschreibung</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 1.630 m</li>
+                <li>Gipfelhöhe: 3.003 m</li>
+                <li>Höhenmeter Aufstieg: 1.400 m</li>
+                <li>Weglänge: 9 km</li>
+                <li>Exposition: S, SO</li>
+                <li>Ausgangspunkt: Lüsens</li>
+                <li>Anfahrt mit Öffis:</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\zischgenscharte.gpx">Download
+                        GPX-Track</a></li>
+            </ul>
+            <figure>
+                <img src="images/zischgenscharte.jpg" alt="Amelie & Johanna auf Skitour">
+                <figcaption>Amelie und Johanna im Aufstieg zum Westfalenhaus (<i class="fa-solid fa-camera"></i>
+                    Linnea Betz)
+                </figcaption>
+            </figure>
 
-                <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
-                <h2 id="Kaunertal" class="inline">Kaunertal</h2>
+            <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
+            <h2 id="Kaunertal" class="inline">Kaunertal</h2>
 
-                <h3>Glockturm (3.355 m)</h3>
-                <p>Der Glockturm ist eine sehr schöne Skitour im hinteren Kaunertal. Durch die hohe Starthöhe ist diese
-                    Tour noch bis in die frühen Sommermonate gut möglich.
-                    Der untere Bereich ist sehr lawinensicher. Der Gipfelhang selbst ist steil und sollte nur bei
-                    sicheren Verhältnissen begangen werden.
-                    Es ist meist möglich, mit Ski bis zum Gipfel aufzusteigen, dafür ist die Mitnahme von Harscheisen zu
-                    empfehlen.
-                    Die Kaunertaler Gletscherstraße ist auch vor 7 Uhr auf eigene Haftung befahrbahr, es gibt dort
-                    inzwischen einen Automaten, an dem man die Maut bezahlen kann.
-                </p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe: 2.332 m</li>
-                    <li>Gipfelhöhe: 3.355 m</li>
-                    <li>Höhenmeter Aufstieg:1.000 m</li>
-                    <li>Weglänge: 4,8 km</li>
-                    <li>Exposition: O</li>
-                    <li>Ausgangspunkt: Parkplatz am Beginn des Riffltales, ca. 100 hm oberhalb des Sessellifts</li>
-                    <li>Anfahrt mit Öffis: erster Bus (Linie 230) kommt leider erst um 9:40 Uhr an</li>
-                </ul>
-                <figure>
-                    <img src="images/glockturm1.jpg" alt="Blick auf Sonnenaufgang">
-                    <figcaption>Sonnenaufgangsstimmung im unteren Bereich der Tour (<i class="fa-solid fa-camera"></i>
-                        Sophie Stoffl)
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="images/glockturm2.jpg" alt="Abfahrt mit Blick auf den Gepatschferner">
-                    <figcaption>Abfahrt vom Glockturm mit Blick auf Gepatschferner, Weißseespitze (Mitte) und Weißkugel
-                        (rechts) (<i class="fa-solid fa-camera"></i> Sophie Stoffl)
-                    </figcaption>
-                </figure>
+            <h3>Glockturm (3.355 m)</h3>
+            <p>Der Glockturm ist eine sehr schöne Skitour im hinteren Kaunertal. Durch die hohe Starthöhe ist diese
+                Tour noch bis in die frühen Sommermonate gut möglich.
+                Der untere Bereich ist sehr lawinensicher. Der Gipfelhang selbst ist steil und sollte nur bei
+                sicheren Verhältnissen begangen werden.
+                Es ist meist möglich, mit Ski bis zum Gipfel aufzusteigen, dafür ist die Mitnahme von Harscheisen zu
+                empfehlen.
+                Die Kaunertaler Gletscherstraße ist auch vor 7 Uhr auf eigene Haftung befahrbahr, es gibt dort
+                inzwischen einen Automaten, an dem man die Maut bezahlen kann.
+            </p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 2.332 m</li>
+                <li>Gipfelhöhe: 3.355 m</li>
+                <li>Höhenmeter Aufstieg:1.000 m</li>
+                <li>Weglänge: 4,8 km</li>
+                <li>Exposition: O</li>
+                <li>Ausgangspunkt: Parkplatz am Beginn des Riffltales, ca. 100 hm oberhalb des Sessellifts</li>
+                <li>Anfahrt mit Öffis: erster Bus (Linie 230) kommt leider erst um 9:40 Uhr an</li>
+            </ul>
+            <figure>
+                <img src="images/glockturm1.jpg" alt="Blick auf Sonnenaufgang">
+                <figcaption>Sonnenaufgangsstimmung im unteren Bereich der Tour (<i class="fa-solid fa-camera"></i>
+                    Sophie Stoffl)
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/glockturm2.jpg" alt="Abfahrt mit Blick auf den Gepatschferner">
+                <figcaption>Abfahrt vom Glockturm mit Blick auf Gepatschferner, Weißseespitze (Mitte) und Weißkugel
+                    (rechts) (<i class="fa-solid fa-camera"></i> Sophie Stoffl)
+                </figcaption>
+            </figure>
 
-                <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
-                <h2 id="Ötztal" class="inline">Ötztal</h2>
+            <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
+            <h2 id="Ötztal" class="inline">Ötztal</h2>
 
-                <h3>Liebener Spitze (3.399 m)</h3>
-                <p>Tolle Skihochtour von Obergurgl aus. Startpunkt ist die Talstation der Hohe Mut Bahn im Zentrum von
-                    Obergurgl. Von dort geht es über die Pisten zum Eingang des Gaisbergtals, auf ca. 2.200 m Höhe an
-                    einem Stausee vorbei und taleinwärts bis zum Beginn des Gaisbergferners.
-                    Diesen betritt man mit Hochtourenausrüstung am linken Rand , umgeht im flacheren Bereich auch die
-                    Spaltenzone eher von links und geht oberhalb der Gletscherbrüche rechts auf einen Steilhang zu, über
-                    die man mit Ski oder zu Fuß (Steigeisen) aufsteigt. Über einen Rücken gelangt man in ein weiteres
-                    Gletscherbecken und anschließend erneut über einen großen Steilhang in das Joch zwischen Hauptgipfel
-                    und Westgipfel der Liebener Spitze. Hier wird meist ein Skidepot eingerichtet und die letzten Meter
-                    zum Gipfelkreuz werden zu Fuß gestapft.
-                </p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe: 1.907 m</li>
-                    <li>Gipfelhöhe: 3.399 m</li>
-                    <li>Höhenmeter Aufstieg: 1.500 m</li>
-                    <li>Weglänge: 8,4 km</li>
-                    <li>Exposition: N, NW</li>
-                    <li>Ausgangspunkt: Obergurgl, Talstation Festkogelbahn</li>
-                    <li>Anfahrt mit Öffis: Mit Bus oder Bahn zum Bahnhof Ötztal Bahnhof und von dort mit mit der Linie 320 (6:23 Uhr) nach Obergurgl Zentrum (Ankunft
-                        um 7:51 Uhr)li>
-                </ul>
+            <h3>Liebener Spitze (3.399 m)</h3>
+            <p>Tolle Skihochtour von Obergurgl aus. Startpunkt ist die Talstation der Hohe Mut Bahn im Zentrum von
+                Obergurgl. Von dort geht es über die Pisten zum Eingang des Gaisbergtals, auf ca. 2.200 m Höhe an
+                einem Stausee vorbei und taleinwärts bis zum Beginn des Gaisbergferners.
+                Diesen betritt man mit Hochtourenausrüstung am linken Rand , umgeht im flacheren Bereich auch die
+                Spaltenzone eher von links und geht oberhalb der Gletscherbrüche rechts auf einen Steilhang zu, über
+                die man mit Ski oder zu Fuß (Steigeisen) aufsteigt. Über einen Rücken gelangt man in ein weiteres
+                Gletscherbecken und anschließend erneut über einen großen Steilhang in das Joch zwischen Hauptgipfel
+                und Westgipfel der Liebener Spitze. Hier wird meist ein Skidepot eingerichtet und die letzten Meter
+                zum Gipfelkreuz werden zu Fuß gestapft.
+            </p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 1.907 m</li>
+                <li>Gipfelhöhe: 3.399 m</li>
+                <li>Höhenmeter Aufstieg: 1.500 m</li>
+                <li>Weglänge: 8,4 km</li>
+                <li>Exposition: N, NW</li>
+                <li>Ausgangspunkt: Obergurgl, Talstation Festkogelbahn</li>
+                <li>Anfahrt mit Öffis: Mit Bus oder Bahn zum Bahnhof Ötztal Bahnhof und von dort mit mit der Linie 320
+                    (6:23 Uhr) nach Obergurgl Zentrum (Ankunft
+                    um 7:51 Uhr)li>
+            </ul>
 
-                <h3>Eiskögele (3.233 m)</h3>
-                <p>Nette Skihochtour von Obergurgl aus mit Möglichkeit zur Abfahrt zur Langtalereckhütte. Los geht es
-                    bei der Talstation der Hohen Mut Bahn in Obergurgl. Am Anfang geht es kurz der Piste entlang in
-                    Richtung Schönwieshütte. Kurz vor der Hütte eröffnet sich dann das Rotmoostal, dem man ein Stück
-                    folgt. Auf der orographisch linken Seite, nach den felsigen Wänden vom Hangerer, kommt bald ein
-                    steiler Nordosthang, der je nach Schneelage mehr oder weniger felsdurchsetzt ist. Diesen Hang gilt
-                    es nun zu besteigen. Danach wird es flacher und man hält sich immer südlich. Irgendwann öffnet sich
-                    das Gelände und man folgt einem schönen Kar zum Eiskögele. Nun geht es immer steiler zu einer
-                    Scharte hinauf. Je nach Schneelage muss schon vor der Scharte Skidepot gemacht werden. Wenn es nicht
-                    eingeschneit ist, findet sich in den Felsen auch ein Stahlseil zur Scharte hinauf. Von der geht es
-                    links nach Süden zuerst breit dann immer schmaler werdend zum Gipfel des Eiskögeles. Hier findet
-                    sich ein Steinmann. Als Abfahrtsalternative kann man auch durch das Hochebenkar zur
-                    Langtalereckhütte abfahren.
-                </p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe: 1.07 m</li>
-                    <li>Gipfelhöhe: 2.233 m/li>
-                    <li>Höhenmeter Aufstieg: 1.318 m</li>
-                    <li>Weglänge: 6,6 km</li>
-                    <li>Exposition: N, O</li>
-                    <li>Ausgangspunkt: Obergurgl</li>
-                    <li>Anfahrt mit Öffis: Mit Bus oder Bahn zum Bahnhof Ötztal Bahnhof und von dort mit mit der Linie 320 (6:23 Uhr) nach Obergurgl Zentrum (Ankunft
-                        um 7:51 Uhr)</li>
-                </ul>
+            <h3>Eiskögele (3.233 m)</h3>
+            <p>Nette Skihochtour von Obergurgl aus mit Möglichkeit zur Abfahrt zur Langtalereckhütte. Los geht es
+                bei der Talstation der Hohen Mut Bahn in Obergurgl. Am Anfang geht es kurz der Piste entlang in
+                Richtung Schönwieshütte. Kurz vor der Hütte eröffnet sich dann das Rotmoostal, dem man ein Stück
+                folgt. Auf der orographisch linken Seite, nach den felsigen Wänden vom Hangerer, kommt bald ein
+                steiler Nordosthang, der je nach Schneelage mehr oder weniger felsdurchsetzt ist. Diesen Hang gilt
+                es nun zu besteigen. Danach wird es flacher und man hält sich immer südlich. Irgendwann öffnet sich
+                das Gelände und man folgt einem schönen Kar zum Eiskögele. Nun geht es immer steiler zu einer
+                Scharte hinauf. Je nach Schneelage muss schon vor der Scharte Skidepot gemacht werden. Wenn es nicht
+                eingeschneit ist, findet sich in den Felsen auch ein Stahlseil zur Scharte hinauf. Von der geht es
+                links nach Süden zuerst breit dann immer schmaler werdend zum Gipfel des Eiskögeles. Hier findet
+                sich ein Steinmann. Als Abfahrtsalternative kann man auch durch das Hochebenkar zur
+                Langtalereckhütte abfahren.
+            </p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 1.07 m</li>
+                <li>Gipfelhöhe: 2.233 m/li>
+                <li>Höhenmeter Aufstieg: 1.318 m</li>
+                <li>Weglänge: 6,6 km</li>
+                <li>Exposition: N, O</li>
+                <li>Ausgangspunkt: Obergurgl</li>
+                <li>Anfahrt mit Öffis: Mit Bus oder Bahn zum Bahnhof Ötztal Bahnhof und von dort mit mit der Linie 320
+                    (6:23 Uhr) nach Obergurgl Zentrum (Ankunft
+                    um 7:51 Uhr)</li>
+            </ul>
 
-                <figure>
-                    <img src="images\eiskoegele.jpg" alt="Blick ins Rotmoostal">
-                    <figcaption>Der erste Blick ins Rotmoostal im Aufstieg zum Eiskögele (<i class="fa-solid fa-camera"></i>
-                        Sophie Stoffl)
-                    </figcaption>
-                </figure>
+            <figure>
+                <img src="images\eiskoegele.jpg" alt="Blick ins Rotmoostal">
+                <figcaption>Der erste Blick ins Rotmoostal im Aufstieg zum Eiskögele (<i class="fa-solid fa-camera"></i>
+                    Sophie Stoffl)
+                </figcaption>
+            </figure>
 
-                <h3>Scheiberkogel (3.133 m)</h3>
-                <p>Beschreibung</p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe:</li>
-                    <li>Gipfelhöhe:</li>
-                    <li>Höhenmeter Aufstieg:</li>
-                    <li>Weglänge:</li>
-                    <li>Exposition:</li>
-                    <li>Ausgangspunkt:</li>
-                    <li>Anfahrt mit Öffis:</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\scheiberkogel.gpx">Download
-                            GPX-Track</a></li>
-                </ul>
+            <h3>Scheiberkogel (3.133 m)</h3>
+            <p>Beschreibung</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe:</li>
+                <li>Gipfelhöhe:</li>
+                <li>Höhenmeter Aufstieg:</li>
+                <li>Weglänge:</li>
+                <li>Exposition:</li>
+                <li>Ausgangspunkt:</li>
+                <li>Anfahrt mit Öffis:</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\scheiberkogel.gpx">Download
+                        GPX-Track</a></li>
+            </ul>
 
-                <h3>Gipfel</h3>
-                <p>Beschreibung</p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe:</li>
-                    <li>Gipfelhöhe:</li>
-                    <li>Höhenmeter Aufstieg:</li>
-                    <li>Weglänge:</li>
-                    <li>Exposition:</li>
-                    <li>Ausgangspunkt:</li>
-                    <li>Anfahrt mit Öffis:</li>
-                    <li></li>
-                </ul>
+            <h3>Gipfel</h3>
+            <p>Beschreibung</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe:</li>
+                <li>Gipfelhöhe:</li>
+                <li>Höhenmeter Aufstieg:</li>
+                <li>Weglänge:</li>
+                <li>Exposition:</li>
+                <li>Ausgangspunkt:</li>
+                <li>Anfahrt mit Öffis:</li>
+                <li></li>
+            </ul>
 
-                <h3>Similaun</h3>
-                <p>Beschreibung</p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe:</li>
-                    <li>Gipfelhöhe:</li>
-                    <li>Höhenmeter Aufstieg:</li>
-                    <li>Weglänge:</li>
-                    <li>Exposition:</li>
-                    <li>Ausgangspunkt:</li>
-                    <li>Anfahrt mit Öffis:</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\similaun.gpx">Download
+            <h3>Similaun</h3>
+            <p>Beschreibung</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe:</li>
+                <li>Gipfelhöhe:</li>
+                <li>Höhenmeter Aufstieg:</li>
+                <li>Weglänge:</li>
+                <li>Exposition:</li>
+                <li>Ausgangspunkt: Martin-Busch-Hütte, Vent</li>
+                <li>Anfahrt mit Öffis:</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\similaun.gpx">Download
                         GPX-Track</a></li>
 
-                </ul>
+            </ul>
 
-                <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
-                <h2 id="Pitztal" class="inline">Pitztal</h2>
+            <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
+            <h2 id="Pitztal" class="inline">Pitztal</h2>
 
-                <h3>slkdf</h3>
+            <h3>slkdf</h3>
 
-                <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
-                <h2 id="Zillertal" class="inline">Zillertal</h2>
+            <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
+            <h2 id="Zillertal" class="inline">Zillertal</h2>
 
-                <h3>Gabler (3.263 m)</h3>
-                <p>Beschreibung</p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe:</li>
-                    <li>Gipfelhöhe:</li>
-                    <li>Höhenmeter Aufstieg:</li>
-                    <li>Weglänge:</li>
-                    <li>Exposition:</li>
-                    <li>Ausgangspunkt:</li>
-                    <li>Anfahrt mit Öffis:</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\gabler.gpx">Download
-                            GPX-Track</a></li>
-                </ul>
+            <h3>Gabler (3.263 m)</h3>
+            <p>Beschreibung</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe:</li>
+                <li>Gipfelhöhe:</li>
+                <li>Höhenmeter Aufstieg:</li>
+                <li>Weglänge:</li>
+                <li>Exposition:</li>
+                <li>Ausgangspunkt:</li>
+                <li>Anfahrt mit Öffis:</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\gabler.gpx">Download
+                        GPX-Track</a></li>
+            </ul>
 
-                <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
-                <h2 id="Stubai" class="inline">Stubai</h2>
+            <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
+            <h2 id="Stubai" class="inline">Stubai</h2>
 
-                <h3>Hinterer Daunkopf Überschreitung (3.225 m)</h3>
-                <p>Beschreibung</p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe:</li>
-                    <li>Gipfelhöhe:</li>
-                    <li>Höhenmeter Aufstieg:</li>
-                    <li>Weglänge:</li>
-                    <li>Exposition:</li>
-                    <li>Ausgangspunkt:</li>
-                    <li>Anfahrt mit Öffis:</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\hinterer_daunkopf_ueberschreitung.gpx">Download
-                            GPX-Track</a>
-                    </li>
-                </ul>
-                <figure>
-                    <img src="images\hinterer_daunkopf.jpg" alt="Anstieg Richtug Glamer Grube">
-                    <figcaption> Blick zum Anstieg von der Wilden Grube in die Glamer Grube (<i class="fa-solid fa-camera"></i>
-                        Sophie Stoffl)
-                    </figcaption>
-                </figure>                
+            <h3>Hinterer Daunkopf Überschreitung (3.225 m)</h3>
+            <p>Beschreibung</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe:</li>
+                <li>Gipfelhöhe:</li>
+                <li>Höhenmeter Aufstieg:</li>
+                <li>Weglänge:</li>
+                <li>Exposition:</li>
+                <li>Ausgangspunkt:</li>
+                <li>Anfahrt mit Öffis:</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\hinterer_daunkopf_ueberschreitung.gpx">Download
+                        GPX-Track</a>
+                </li>
+            </ul>
+            <figure>
+                <img src="images\hinterer_daunkopf.jpg" alt="Anstieg Richtug Glamer Grube">
+                <figcaption> Blick zum Anstieg von der Wilden Grube in die Glamer Grube (<i
+                        class="fa-solid fa-camera"></i>
+                    Sophie Stoffl)
+                </figcaption>
+            </figure>
 
-                <h3>Innere Sommerwand (3.123 m) von Seduck</h3>
-                <p>Diese schöne Skitour ist zwar leider mit einem sehr langen Zustieg verbunden, aber wenn man die Franz-Senn Hütte mal erreicht hat, wartet wunderschönes Skitourengelände auf einen.
-                Am Sommerwandferner hält man sich eher im rechten Bereich. Die letzten Höhenmeter aus dem Kar des Sommerwandferners hinauf in die Kräulscharte wird es noch etwas steiler. 
-                In der Scharte macht man dan Skidepot und steigt die letzten Meter zum Gipfel über den ausgesetzten, aber teils mit Fixseilen versicherten Grat zum Gipfel.</p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe: 1.460 m </li>
-                    <li>Gipfelhöhe: 3.123 m </li>
-                    <li>Höhenmeter Aufstieg: 1.670 m</li>
-                    <li>Weglänge: 21,7 km (einfach!)</li>
-                    <li>Exposition: NO (Zustieg zur Fran-Senn-Hütte meist SO)</li>
-                    <li>Ausgangspunkt: Seduck</li>
-                    <li>Anfahrt mit Öffis: nur in Verbindung mit Taxi möglich</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\innere_sommerwand.gpx">Download
-                            GPX-Track</a>
-                    </li>
-                </ul>
+            <h3>Innere Sommerwand (3.123 m) von Seduck</h3>
+            <p>Diese schöne Skitour ist zwar leider mit einem sehr langen Zustieg verbunden, aber wenn man die
+                Franz-Senn Hütte mal erreicht hat, wartet wunderschönes Skitourengelände auf einen.
+                Am Sommerwandferner hält man sich eher im rechten Bereich. Die letzten Höhenmeter aus dem Kar des
+                Sommerwandferners hinauf in die Kräulscharte wird es noch etwas steiler.
+                In der Scharte macht man dan Skidepot und steigt die letzten Meter zum Gipfel über den ausgesetzten,
+                aber teils mit Fixseilen versicherten Grat zum Gipfel.</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 1.460 m </li>
+                <li>Gipfelhöhe: 3.123 m </li>
+                <li>Höhenmeter Aufstieg: 1.670 m</li>
+                <li>Weglänge: 21,7 km (einfach!)</li>
+                <li>Exposition: NO (Zustieg zur Fran-Senn-Hütte meist SO)</li>
+                <li>Ausgangspunkt: Seduck</li>
+                <li>Anfahrt mit Öffis: nur in Verbindung mit Taxi möglich</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\innere_sommerwand.gpx">Download
+                        GPX-Track</a>
+                </li>
+            </ul>
+
+            <h3>Ruderhofspitze</h3>
+            <p>Beschreibung</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 1430 m</li>
+                <li>Gipfelhöhe: 3474 m</li>
+                <li>Höhenmeter Aufstieg: 2150 hm</li>
+                <li>Weglänge: 32 km (hin und zurück)</li>
+                <li>Exposition: NW-NO</li>
+                <li>Ausgangspunkt: Seeduck oder Franz-Senn-Hütte</li>
+                <li>Anfahrt mit Öffis: nur in Verbindung mit Taxi möglich</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\ruderhofspitze.gpx">Download
+                        GPX-Track</a></li>
+            </ul>
+            <figure>
+                <img src="images\ruderhofspitze.jpg" alt="xxx">
+                <figcaption>xxx (<i class="fa-solid fa-camera"></i>
+                    Name)
+                </figcaption>
+            </figure>
 
 
-                <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
-                <h2 id="Brenner" class="inline">Wipptal und Brenner</h2>
+            <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
+            <h2 id="Brenner" class="inline">Wipptal und Brenner</h2>
 
-                
-                <h3>Kleiner Kaserer (3.093 m)</h3>
-                <p>Tolle Skitour für sichere Lawinenverhältnisse im Angesicht des Olperers! Besonders der Grat, den man am Schluss ohne Ski meistert ist wunderschön, aber auch die Nordhänge im oberen Bereich der Tour bieten tolles Skigelände!
-                    Vom Parkplatz in Toldern zunächst über den Forstweg hinauf ins Wildlahnertal, dann (im Frühjahr meist einige Lawinenkegel querend) zur ersten Steilstufe. 
-                    Vor dem Wetterkreuz auf ca. 2.400 m Höhe hälzt man sich links und steigt dann vor den Wänden des Kleinen Kaserer über den am Schluss steilen Hang zur Höllscharte hinauf.
-                    Hier wird die Einsamkeit plötzlich von vorbeifahrenden Skifahrern des Gletscherskigebiets Hintertuxer Gletscher durchbrochen. 
-                    Von der Scharte in Richtung Norden geht es nun ohne Ski auf den schönen Gipfelgrat. Für diesen sind Steigeisen und Pickel (je nach Bedingungen) zu empfehlen.
-                </p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe: 1.530 m</li>
-                    <li>Gipfelhöhe: 3.093 m</li>
-                    <li>Höhenmeter Aufstieg: 1.590 m</li>
-                    <li>Weglänge: 7 km</li>
-                    <li>Exposition: W, NW </li>
-                    <li>Ausgangspunkt: Toldern im Schmirntal</li>
-                    <li>Anfahrt mit Öffis: mit dem Zug nach St. Jodok am Brenner, von dort aus mit dem Bus 4144 bis nach Schmirn Toldern. Unter der Woche erste Ankunft dort um 6:40 Uhr, am Wochenende später. Von der Haltestelle ist es noch ca. 1 km bis zum Parkplatz.</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\kleiner_kaserer.gpx">Download
-                            GPX-Track</a>
-                    </li>
-                </ul>
-                <figure>
-                    <img src="images\kleiner_kaserer.jpg" alt="Olpererblick im Wildlahnertal">
-                    <figcaption>Aufstieg im Wildlahnertal mit Blick auf den Olperer (<i class="fa-solid fa-camera"></i>
-                        Sophie Stoffl)
-                    </figcaption>
-                </figure>
 
-                <figure>
-                    <img src="images\kleiner_kaserer_2.jpg" alt="Gipfelgrat zum Kleinen Kaserer">
-                    <figcaption>Die letzten Meter zum kleinen Kaserer auf dem schönen Grat (<i class="fa-solid fa-camera"></i>
-                        Adrian Wiewiora)
-                    </figcaption>
-                </figure>
+            <h3>Kleiner Kaserer (3.093 m)</h3>
+            <p>Tolle Skitour für sichere Lawinenverhältnisse im Angesicht des Olperers! Besonders der Grat, den man am
+                Schluss ohne Ski meistert ist wunderschön, aber auch die Nordhänge im oberen Bereich der Tour bieten
+                tolles Skigelände!
+                Vom Parkplatz in Toldern zunächst über den Forstweg hinauf ins Wildlahnertal, dann (im Frühjahr meist
+                einige Lawinenkegel querend) zur ersten Steilstufe.
+                Vor dem Wetterkreuz auf ca. 2.400 m Höhe hälzt man sich links und steigt dann vor den Wänden des Kleinen
+                Kaserer über den am Schluss steilen Hang zur Höllscharte hinauf.
+                Hier wird die Einsamkeit plötzlich von vorbeifahrenden Skifahrern des Gletscherskigebiets Hintertuxer
+                Gletscher durchbrochen.
+                Von der Scharte in Richtung Norden geht es nun ohne Ski auf den schönen Gipfelgrat. Für diesen sind
+                Steigeisen und Pickel (je nach Bedingungen) zu empfehlen.
+            </p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe: 1.530 m</li>
+                <li>Gipfelhöhe: 3.093 m</li>
+                <li>Höhenmeter Aufstieg: 1.590 m</li>
+                <li>Weglänge: 7 km</li>
+                <li>Exposition: W, NW </li>
+                <li>Ausgangspunkt: Toldern im Schmirntal</li>
+                <li>Anfahrt mit Öffis: mit dem Zug nach St. Jodok am Brenner, von dort aus mit dem Bus 4144 bis nach
+                    Schmirn Toldern. Unter der Woche erste Ankunft dort um 6:40 Uhr, am Wochenende später. Von der
+                    Haltestelle ist es noch ca. 1 km bis zum Parkplatz.</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\kleiner_kaserer.gpx">Download
+                        GPX-Track</a>
+                </li>
+            </ul>
+            <figure>
+                <img src="images\kleiner_kaserer.jpg" alt="Olpererblick im Wildlahnertal">
+                <figcaption>Aufstieg im Wildlahnertal mit Blick auf den Olperer (<i class="fa-solid fa-camera"></i>
+                    Sophie Stoffl)
+                </figcaption>
+            </figure>
 
-                <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
-                <h2 id="Tauern" class="inline">Hohe Tauern</h2>
+            <figure>
+                <img src="images\kleiner_kaserer_2.jpg" alt="Gipfelgrat zum Kleinen Kaserer">
+                <figcaption>Die letzten Meter zum kleinen Kaserer auf dem schönen Grat (<i
+                        class="fa-solid fa-camera"></i>
+                    Adrian Wiewiora)
+                </figcaption>
+            </figure>
 
-                <h3>Großglockner (3.789 m)</h3>
-                <p>Beschreibung</p>
-                <h4>Tourensteckbrief</h4>
-                <ul>
-                    <li>Starthöhe:</li>
-                    <li>Gipfelhöhe:</li>
-                    <li>Höhenmeter Aufstieg:</li>
-                    <li>Weglänge:</li>
-                    <li>Exposition:</li>
-                    <li>Ausgangspunkt:</li>
-                    <li>Anfahrt mit Öffis:</li>
-                    <li><i class="fas fa-download"></i> <a href="gpx\großglockner.gpx">Download
-                            GPX-Track</a></li>
-                </ul>
+            <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
+            <h2 id="Tauern" class="inline">Hohe Tauern</h2>
 
-                <p></p>
+            <h3>Großglockner (3.789 m)</h3>
+            <p>Beschreibung</p>
+            <h4>Tourensteckbrief</h4>
+            <ul>
+                <li>Starthöhe:</li>
+                <li>Gipfelhöhe:</li>
+                <li>Höhenmeter Aufstieg:</li>
+                <li>Weglänge:</li>
+                <li>Exposition:</li>
+                <li>Ausgangspunkt:</li>
+                <li>Anfahrt mit Öffis:</li>
+                <li><i class="fas fa-download"></i> <a href="gpx\großglockner.gpx">Download
+                        GPX-Track</a></li>
+            </ul>
 
-            </article>
-            <footer>
-                <strong>Datenquellen:</strong>
-                <nav>
-                    <a href="https://www.alpenvereinaktiv.com/">Tourenportal Alpenvereinaktiv</a>
-                </nav>
+            <p></p>
 
-            </footer>
+        </article>
+        <footer>
+            <strong>Datenquellen:</strong>
+            <nav>
+                <a href="https://www.alpenvereinaktiv.com/">Tourenportal Alpenvereinaktiv</a>
+            </nav>
 
-        </main>
-    </body>
+        </footer>
+
+    </main>
+</body>
 
 </html>
