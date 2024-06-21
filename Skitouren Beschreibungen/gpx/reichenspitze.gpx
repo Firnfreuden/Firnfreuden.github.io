@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.5.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="47.093151200000001" minlon="11.157007100000000" maxlat="47.101132000000000" maxlon="11.193616900000000"/></metadata>                  
+<wpt lat="47.0942876" lon="11.1874651">
+  <ele>1794.0</ele>
+</wpt>
+<wpt lat="47.0940451" lon="11.1835679">
+  <ele>1966.0</ele>
+</wpt>
+<wpt lat="47.0984177" lon="11.1598354">
+  <ele>2711.0</ele>
+</wpt>
+<wpt lat="47.0997843" lon="11.1579552">
+  <ele>2817.0</ele>
+</wpt>
+<trk>
+  <name>149 - Schafgrübler (Oberisshütte)</name>
+  <cmt>Skitourenguru übernimmt hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der bereitgestellten Daten keine Gewährleistung. Skitourenguru behält sich ausdrücklich vor, jederzeit Inhalte ohne Ankündigung ganz oder teilweise zu ändern, zu löschen oder zeitweise nicht zu veröffentlichen. Haftungsansprüche gegen Skitourenguru wegen Schäden materieller oder immaterieller Art, welche aus dem Zugriff oder der Nutzung bzw. Nichtnutzung der zur bereitgestellten Daten, durch Missbrauch der Verbindung oder durch technische Störungen entstanden sind, werden ausgeschlossen. Skitourenguru (© 2023).</cmt>
+  <trkseg>
+    <trkpt lat="47.0947527" lon="11.1936169">
+        <ele>1744.0</ele>
+    </trkpt>
+    <trkpt lat="47.0947125" lon="11.1914833">
+        <ele>1756.0</ele>
+    </trkpt>
+    <trkpt lat="47.0947545" lon="11.1908489">
+        <ele>1761.0</ele>
+    </trkpt>
+    <trkpt lat="47.0952368" lon="11.1896959">
+        <ele>1767.0</ele>
+    </trkpt>
+    <trkpt lat="47.095118" lon="11.1891207">
+        <ele>1769.0</ele>
+    </trkpt>
+    <trkpt lat="47.0945284" lon="11.1884065">
+        <ele>1774.0</ele>
+    </trkpt>
+    <trkpt lat="47.0942636" lon="11.1877318">
+        <ele>1781.0</ele>
+    </trkpt>
+    <trkpt lat="47.0943232" lon="11.1870704">
+        <ele>1817.0</ele>
+    </trkpt>
+    <trkpt lat="47.0942308" lon="11.1859933">
+        <ele>1863.0</ele>
+    </trkpt>
+    <trkpt lat="47.094009" lon="11.184737">
+        <ele>1908.0</ele>
+    </trkpt>
+    <trkpt lat="47.0939936" lon="11.1839204">
+        <ele>1947.0</ele>
+    </trkpt>
+    <trkpt lat="47.094137" lon="11.1829392">
+        <ele>2006.0</ele>
+    </trkpt>
+    <trkpt lat="47.0941003" lon="11.1824267">
+        <ele>2039.0</ele>
+    </trkpt>
+    <trkpt lat="47.0932789" lon="11.1799294">
+        <ele>2120.0</ele>
+    </trkpt>
+    <trkpt lat="47.0931512" lon="11.1788934">
+        <ele>2143.0</ele>
+    </trkpt>
+    <trkpt lat="47.0932194" lon="11.1782184">
+        <ele>2157.0</ele>
+    </trkpt>
+    <trkpt lat="47.0936712" lon="11.1773565">
+        <ele>2196.0</ele>
+    </trkpt>
+    <trkpt lat="47.0939008" lon="11.1771231">
+        <ele>2214.0</ele>
+    </trkpt>
+    <trkpt lat="47.095146" lon="11.1768088">
+        <ele>2269.0</ele>
+    </trkpt>
+    <trkpt lat="47.0956806" lon="11.1765234">
+        <ele>2289.0</ele>
+    </trkpt>
+    <trkpt lat="47.095945" lon="11.1762226">
+        <ele>2308.0</ele>
+    </trkpt>
+    <trkpt lat="47.0962075" lon="11.1758297">
+        <ele>2334.0</ele>
+    </trkpt>
+    <trkpt lat="47.0967729" lon="11.1743172">
+        <ele>2397.0</ele>
+    </trkpt>
+    <trkpt lat="47.0970054" lon="11.1732928">
+        <ele>2442.0</ele>
+    </trkpt>
+    <trkpt lat="47.0971046" lon="11.1723529">
+        <ele>2455.0</ele>
+    </trkpt>
+    <trkpt lat="47.0970935" lon="11.1712988">
+        <ele>2499.0</ele>
+    </trkpt>
+    <trkpt lat="47.0972822" lon="11.1712779">
+        <ele>2499.0</ele>
+    </trkpt>
+    <trkpt lat="47.0972828" lon="11.1698939">
+        <ele>2506.0</ele>
+    </trkpt>
+    <trkpt lat="47.0976272" lon="11.1657672">
+        <ele>2587.0</ele>
+    </trkpt>
+    <trkpt lat="47.0983339" lon="11.1608215">
+        <ele>2672.0</ele>
+    </trkpt>
+    <trkpt lat="47.0984294" lon="11.1596971">
+        <ele>2716.0</ele>
+    </trkpt>
+    <trkpt lat="47.098423" lon="11.1574829">
+        <ele>2752.0</ele>
+    </trkpt>
+    <trkpt lat="47.098455" lon="11.1572707">
+        <ele>2757.0</ele>
+    </trkpt>
+    <trkpt lat="47.0985773" lon="11.1570811">
+        <ele>2764.0</ele>
+    </trkpt>
+    <trkpt lat="47.098774" lon="11.1570071">
+        <ele>2771.0</ele>
+    </trkpt>
+    <trkpt lat="47.0992889" lon="11.1571046">
+        <ele>2795.0</ele>
+    </trkpt>
+    <trkpt lat="47.0994716" lon="11.1572421">
+        <ele>2803.0</ele>
+    </trkpt>
+    <trkpt lat="47.1005163" lon="11.1596247">
+        <ele>2851.0</ele>
+    </trkpt>
+    <trkpt lat="47.1008024" lon="11.1599953">
+        <ele>2874.0</ele>
+    </trkpt>
+    <trkpt lat="47.101132" lon="11.1602849">
+        <ele>2904.0</ele>
+    </trkpt>
+  </trkseg>
+</trk>
+</gpx>
