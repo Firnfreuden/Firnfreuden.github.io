@@ -103,7 +103,6 @@ omnivore.gpx('/Skitouren Beschreibungen/gpx/laengentaler_weisserkogel.gpx').addT
 omnivore.gpx('/Skitouren Beschreibungen/gpx/luesener_fernerkogel_und_spitze.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/scheiberkogel.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/zischgenscharte.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/reichenspitze.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/ruderhofspitze.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/Skitouren Beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
 
