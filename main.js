@@ -30,8 +30,8 @@ let themaLayer = {
     route: L.featureGroup(),
     temperature: L.featureGroup(),
     schnee: L.featureGroup(),
-    forecast: L.featureGroup(),
-    routes: L.featureGroup(),
+    forecast: L.featureGroup().addTo(map),
+    routes: L.featureGroup().addTo(map),
 
 }
 
@@ -68,10 +68,10 @@ L.control.layers({
 }, {
     "Wetterstationen": themaLayer.stations,
     "Temperatur [°C]": themaLayer.temperature,
-    "Wind [km/h]": themaLayer.wind,
+    "Windrichtung": themaLayer.wind,
     "Schneehöhe [cm]": themaLayer.schnee,
     "Wettervorhersage MET Norway": themaLayer.forecast,
-    "ECMWF Windvorhersage": themaLayer.wind,
+    //"ECMWF Windvorhersage": themaLayer.wind,
     "Skitouren": themaLayer.routes,
 }).addTo(map);
 
