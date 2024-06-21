@@ -372,6 +372,8 @@ async function loadGeoJSONRoute() {
                 if (feature.properties && feature.properties.name) {
                     layer.bindPopup(feature.properties.name);
                 }
+                else
+                    layer.bindPopup()
             }
         }).addTo(themaLayer.routes);   // 'themaLayer.routes' ist deine Leaflet-Feature-Gruppe für Routen
     } catch (error) {
