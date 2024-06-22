@@ -396,38 +396,3 @@ async function loadGeoJSONRoute() {
 // Aufruf der Funktion zum Laden der GeoJSON-Route
 loadGeoJSONRoute();
 
-
-async function loadGeoJSONRoute() {
-    let geojsonPath = '/skitouren_beschreibungen/gpx/tracks_geojson.geojson';
-
-    try {
-        // GeoJSON-Datei über fetch laden
-        let response = await fetch(geojsonPath);
-        let geojsonData = await response.json();
-
-        // GeoJSON-Layer zur Karte hinzufügen
-        L.geoJSON(geojsonData, {
-            style: function (feature) {
-                return {
-                    color: "blue",      // Farbe der Linie
-                    weight: 3,          // Breite der Linie
-                    opacity: 0.8        // Deckkraft der Linie
-                };
-            },
-            onEachFeature: function (feature, layer) {
-                // Popup hinzufügen (optional)
-                if (feature.properties && feature.properties.name) {
-                    layer.bindPopup(feature.properties.name);
-                }
-                else
-                    layer.bindPopup()
-            }
-        }).addTo(themaLayer.routes);   // 'themaLayer.routes' ist deine Leaflet-Feature-Gruppe für Routen
-    } catch (error) {
-        console.error('Error loading GeoJSON:', error);
-    }
-}
-
-// Aufruf der Funktion zum Laden der GeoJSON-Route
-loadGeoJSONRoute();
-
