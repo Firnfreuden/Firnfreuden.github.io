@@ -351,7 +351,7 @@ showStations("https://static.avalanche.report/weather_stations/stations.geojson"
 
 // Funktion zum Laden und Anzeigen der GeoJSON-Route
 async function loadGeoJSONRoute() {
-    let geojsonPath = '/Skitouren Beschreibungen/gpx/tracks_geojson.geojson';
+    let geojsonPath = '/skitouren_beschreibungen/gpx/tracks_geojson.geojson';
 
     try {
         // GeoJSON-Datei über fetch laden
