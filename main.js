@@ -30,7 +30,7 @@ let themaLayer = {
     route: L.featureGroup(),
     temperature: L.featureGroup(),
     schnee: L.featureGroup(),
-    forecast: L.featureGroup().addTo(map),
+    forecast: L.featureGroup(),
     routes: L.featureGroup().addTo(map),
 
 }
@@ -93,18 +93,30 @@ L.control.scale({
 }).addTo(map);
 
 
-// GPX Tracks mit leaflet omnivore hinzufpgen
-omnivore.gpx('/Skitouren Beschreibungen/gpx/hinterer_daunkopf_ueberschreitung.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/gabler.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/großglockner.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/innere_sommerwand.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/kleiner_kaserer.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/laengentaler_weisserkogel.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/luesener_fernerkogel_und_spitze.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/scheiberkogel.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/zischgenscharte.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/ruderhofspitze.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/Skitouren Beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
+// GPX Tracks mit leaflet omnivore hinzufpgen (alphabetisch sortieren!)
+omnivore.gpx('/skitouren_beschreibungen/gpx/atemkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/finstertaler_schartenkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/fluchtkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/gabler.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/großglockner.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/guslarspitze.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/hinterer_daunkopf.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/hoher_seeblaskogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/innere_sommerwand.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/k2.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/kleiner_kaserer.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/laengentaler_weisserkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/luesener_fernerkogel_luesener_spitze.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/reichenspitze.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/ruderhofspitze.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/scheiberkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/sulzkogel.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/wildspitze.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/wurmtalerkopf.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/zischgenscharte.gpx').addTo(themaLayer.routes);
+omnivore.gpx('/skitouren_beschreibungen/gpx/zuckerhuetl.gpx').addTo(themaLayer.routes);
+
 
 // GPX Dateien laden und zur Karte hinzufügen
 /* let controlElevation = L.control.elevation({
@@ -119,10 +131,10 @@ controlElevation.load("/Skitouren Beschreibungen/gpx/glockturm.gpx"); */
 // GPX-Dateien laden und zur Karte hinzufügen
 /* function initMap() {
     let gpxfiles = [
-        '/Skitouren Beschreibungen/gpx/glockturm.gpx',
-        '/Skitouren Beschreibungen/gpx/laengentaler_weißerkogel.gpx',
-        '/Skitouren Beschreibungen/gpx/liebener_spitze.gpx',
-        '/Skitouren Beschreibungen/gpx/luesener_fernerkogel_und_spitze.gpx'
+        '/skitouren_beschreibungen/gpx/glockturm.gpx',
+        '/skitouren_beschreibungen/gpx/laengentaler_weißerkogel.gpx',
+        '/skitouren_beschreibungen/gpx/liebener_spitze.gpx',
+        '/skitouren_beschreibungen/gpx/luesener_fernerkogel_und_spitze.gpx'
     ];
 
     let gpxLayers = [];
@@ -385,4 +397,37 @@ async function loadGeoJSONRoute() {
 loadGeoJSONRoute();
 
 
+async function loadGeoJSONRoute() {
+    let geojsonPath = '/skitouren_beschreibungen/gpx/tracks_geojson.geojson';
+
+    try {
+        // GeoJSON-Datei über fetch laden
+        let response = await fetch(geojsonPath);
+        let geojsonData = await response.json();
+
+        // GeoJSON-Layer zur Karte hinzufügen
+        L.geoJSON(geojsonData, {
+            style: function (feature) {
+                return {
+                    color: "blue",      // Farbe der Linie
+                    weight: 3,          // Breite der Linie
+                    opacity: 0.8        // Deckkraft der Linie
+                };
+            },
+            onEachFeature: function (feature, layer) {
+                // Popup hinzufügen (optional)
+                if (feature.properties && feature.properties.name) {
+                    layer.bindPopup(feature.properties.name);
+                }
+                else
+                    layer.bindPopup()
+            }
+        }).addTo(themaLayer.routes);   // 'themaLayer.routes' ist deine Leaflet-Feature-Gruppe für Routen
+    } catch (error) {
+        console.error('Error loading GeoJSON:', error);
+    }
+}
+
+// Aufruf der Funktion zum Laden der GeoJSON-Route
+loadGeoJSONRoute();
 
