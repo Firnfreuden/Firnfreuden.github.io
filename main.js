@@ -394,5 +394,5 @@ async function loadGeoJSONRoute() {
 }
 
 // Aufruf der Funktion zum Laden der GeoJSON-Route
-// loadGeoJSONRoute();
+loadGeoJSONRoute();
 
