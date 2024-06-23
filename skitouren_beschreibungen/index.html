@@ -23,7 +23,6 @@
 </head>
 
 <body id="top">
-
     <header>
         <nav>
             <div class="nav-element nav-element-title">
@@ -66,52 +65,133 @@
                 <li><a href="#Tauern"><i class="fa-solid fa-arrow-right"></i> Hohe Tauern</a></li>
             </ul>
 
-            <h3>Vorlage, später rauslöschen:</h3>
-            <h3>Gipfel</h3>
-            <p>Beschreibung</p>
-            <h4>Tourensteckbrief</h4>
-            <ul>
-                <li>Starthöhe:</li>
-                <li>Gipfelhöhe:</li>
-                <li>Höhenmeter Aufstieg:</li>
-                <li>Weglänge:</li>
-                <li>Exposition:</li>
-                <li>Ausgangspunkt:</li>
-                <li>Anfahrt mit Öffis:</li>
-                <li></li>
-            </ul>
-            <figure>
-                <img src="images/vorlage.jpg" alt="Blick auf ...">
-                <figcaption>Vorlagentour (<i class="fa-solid fa-camera"></i>
-                    Fotograf)
-                </figcaption>
-            </figure>
+            <!--Vorlge - Am Ende löschen -->
+            <div class="tile">
+                <div style="text-align: right;">
+                    <img src="images/laengentaler_weißerkogel.jpg" alt="Tourfoto">
+                    <div class="img-author">
+                        <i class="fa-solid fa-camera"></i>
+                        {FOTOGRAF}
+                    </div>
+                </div>
+                <div class="tile-content" style="margin-bottom: 4px">
+                    <h2 style="margin-top: 0;">{GIPFELNAME} ({HÖHE} m)</h2>
+                    <p>
+                        {BESCHREIBUNG}
+                    </p>
+                </div>
+                <hr>
+                <div class="tile-content" style="margin-bottom: 26px;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Starthöhe:</td>
+                                <td>{X} m</td>
+                            </tr>
+                            <tr>
+                                <td>Gipfelhöhe:</td>
+                                <td>{X} m</td>
+                            </tr>
+                            <tr>
+                                <td>Höhenmeter Aufstieg:</td>
+                                <td>{X} m</td>
+                            </tr>
+                            <tr>
+                                <td>Weglänge:</td>
+                                <td>{X} km</td>
+                            </tr>
+                            <tr>
+                                <td>Exposition:</td>
+                                <td>{X}</td>
+                            </tr>
+                            <tr>
+                                <td>Ausgangspunkt:</td>
+                                <td>{X}</td>
+                            </tr>
+                            <tr>
+                                <td>Anfahrt mit Öffis:</td>
+                                <td>{X}</td>
+                            </tr>
+                            <tr>
+                                <td>GPX Track:</td>
+                                <td>
+                                    <i class="fas fa-download"></i>
+                                    {ACHTUNG LINK ÄNDERN}
+                                    <a href="gpx\luesener_fernerkogel_luesener_spitze.gpx">Download</a></li>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
             <a href="#top"> <i class="fa-solid fa-circle-arrow-up"></i></a>
             <h2 id="Sellrain" class="inline">Sellrain</h2>
 
-            <h3>Längentaler Weißerkogel (3.217 m)</h3>
-            <p>Der Längentaler Weißerkogel ist eine lange Skitour, bei der man aber in der Abfahrt für die Mühen
-                belohnt wird! Besonders nach Neuschnee gut geeignet, wenn die meisten anderen Touren zu heikel sind.
-                Lediglich der Gipfelhang ist deutlich steiler, aber auch ohne diesen hat man eine traumhafte Abfahrt
-                vor sich. </p>
-            <h4>Tourensteckbrief</h4>
-            <ul>
-                <li>Starthöhe: 1.630 m</li>
-                <li>Gipfelhöhe: 3.217 m</li>
-                <li>Höhenmeter Aufstieg: 1.580 m</li>
-                <li>Weglänge: 10 km</li>
-                <li>Exposition: N, O</li>
-                <li>Ausgangspunkt: Lüsens</li>
-                <li>Anfahrt mit Öffis: eher nicht, Bus fährt nur nach Praxmar (Ankunft dort gegen 9 Uhr)
-                </li>
-            </ul>
-            <figure>
-                <img src="images/laengentaler_weißerkogel.jpg" alt="Blick auf ...">
-                <figcaption>Sonnenaufgangsstimmung im unteren Bereich der Tour (<i class="fa-solid fa-camera"></i>
-                    Sophie Stoffl)
-                </figcaption>
-            </figure>
+            <!-- Längentaler Weißerkogel -->
+            <div class="tile">
+                <div style="text-align: right;">
+                    <img src="images/laengentaler_weißerkogel.jpg" alt="Tourfoto">
+                    <div class="img-author">
+                        <i class="fa-solid fa-camera"></i>
+                        Sophie Stoffl
+                    </div>
+                </div>
+                <div class="tile-content" style="margin-bottom: 4px">
+                    <h2 style="margin-top: 0;">Längentaler Weißerkogel (3.217 m)</h2>
+                    <p>
+                        Der Längentaler Weißerkogel ist eine lange Skitour, bei der man aber in der Abfahrt für die
+                        Mühen
+                        belohnt wird! Besonders nach Neuschnee gut geeignet, wenn die meisten anderen Touren zu heikel
+                        sind.
+                        Lediglich der Gipfelhang ist deutlich steiler, aber auch ohne diesen hat man eine traumhafte
+                        Abfahrt
+                        vor sich.
+                    </p>
+                </div>
+                <hr>
+                <div class="tile-content" style="margin-bottom: 26px;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Starthöhe:</td>
+                                <td>1.630 m</td>
+                            </tr>
+                            <tr>
+                                <td>Gipfelhöhe:</td>
+                                <td>3.217 m</td>
+                            </tr>
+                            <tr>
+                                <td>Höhenmeter Aufstieg:</td>
+                                <td>1.580 m</td>
+                            </tr>
+                            <tr>
+                                <td>Weglänge:</td>
+                                <td>10 km</td>
+                            </tr>
+                            <tr>
+                                <td>Exposition:</td>
+                                <td>N, O</td>
+                            </tr>
+                            <tr>
+                                <td>Ausgangspunkt:</td>
+                                <td>Lüsens</td>
+                            </tr>
+                            <tr>
+                                <td>Anfahrt mit Öffis:</td>
+                                <td>eher nicht, Bus fährt nur nach Praxmar (Ankunft dort gegen 9 Uhr)</td>
+                            </tr>
+                            <tr>
+                                <td>GPX Track:</td>
+                                <td>
+                                    <i class="fas fa-download"></i>
+                                    <a href="gpx\luesener_fernerkogel_luesener_spitze.gpx">Download</a></li>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
             <h3>Lüsener Fernerkogel (3.298 m) und Lüsener Spitze (3.231 m)</h3>
             <p> Tolle Skitour auf den Lüsener Fernerkogel, der am Talende des Lüsenstals thront.
