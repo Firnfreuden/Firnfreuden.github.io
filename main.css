@@ -28,6 +28,7 @@ header {
 main {
     max-width: 1000px;
     margin: auto;
+    margin-top: 3.5rem; /* Nav Leiste ausgleichen */
     padding: 0 20px 0 20px;
 }
 
@@ -88,10 +89,6 @@ footer nav {
 }
 
 /** hauptseite **/
-
-article {
-    margin-top: 0.5em;
-}
 
 hr {
     border-bottom-width: 0;
