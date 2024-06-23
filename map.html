@@ -55,58 +55,50 @@
 </head>
 
 <body>
+
+    <header>
+        <nav>
+            <div class="nav-element nav-element-title">
+                <i class="fa-regular fa-snowflake"></i>
+                Firnfreuden
+            </div>
+            <div class="nav-element">
+                <a href="index.html">Startseite</a>
+            </div>
+            <div class="nav-element nav-element-active">
+                <a href="map.html">Übersichtskarte</a>
+            </div>
+            <div class="nav-element">
+                <a href="skitouren_beschreibungen/index.html">Skitouren</a>
+            </div>
+            <div class="nav-element">
+                <a href="about_us/index.html">Über Uns</a>
+            </div>
+            <div class="nav-element">
+                <a href="konzept.pdf" target="_blank">Konzept</a>
+            </div>
+            <div class="nav-element">
+                <a href="https://github.com/Firnfreuden/Firnfreuden.github.io/" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
     <main>
-        <header>
-            <nav>
-                <div class="git">
-                    <div class="nav-github">
-                        <i class="fab fa-github"></i> <a
-                            href="https://github.com/Firnfreuden/Firnfreuden.io/">Github</a>
-                    </div>
-                </div>
-
-            </nav>
-            <h1>Firnfreuden</h1>
-            <h2>Eine Planungsunterstützung für Frühjahrsskitouren</h2>
-            <h4>Johanna Mascher, Amelie Singler, Sophie Stoffl</h4>
-
-            <nav>
-                <div class="navigation">
-
-                    <div class="nav-badge">
-                        <a href="index.html"> Startseite</a>
-                    </div>
-
-                    <div class="nav-badge-1">
-                        <a href="map.html">zur Karte mit Frühjahrsskitouren</a>
-                    </div>
-
-                    <div class="nav-badge">
-                        <a href="skitouren_beschreibungen/index.html">Sammlung von Frühjahrsskitouren in Tirol</a>
-                    </div>
-
-                    <div class="nav-badge">
-                        <a href="about_us/index.html">About us</a>
-                    </div>
-
-                    <div class="nav-badge">
-                        <a href="konzept.pdf">Link zum Konzept</a>
-                    </div>
-
-                </div>
-            </nav>
-
-        </header>
         <article>
             <p>Auf dieser Seite findet ihr Informationen zu Tourenbedingungen sowie einige Tourenideen.
             <ul>
-                <li>Um aktuelle Stationsdaten zu erhalten: <b>Wetterstationslayer</b> anschalten und die gewüschte Station auf der Karte anklicken</li>
-                <li>Für aktuelle Wettervorhersagen: Layer "<b>Wettervorhersage MET Norway</b>" anschalten und gewüschten Ort auf der Karte anklicken</li>
-                <li>Um alle Skitouren aus der Sammlung in der Karte anzuzeigen: Layer "<b>Skitouren</b>" anschalten, dann gewüschte Skitour anklicken für mehr Infos</li>
+                <li>Um aktuelle Stationsdaten zu erhalten: <b>Wetterstationslayer</b> anschalten und die gewüschte
+                    Station auf der Karte anklicken</li>
+                <li>Für aktuelle Wettervorhersagen: Layer "<b>Wettervorhersage MET Norway</b>" anschalten und gewüschten
+                    Ort auf der Karte anklicken</li>
+                <li>Um alle Skitouren aus der Sammlung in der Karte anzuzeigen: Layer "<b>Skitouren</b>" anschalten,
+                    dann gewüschte Skitour anklicken für mehr Infos</li>
                 <li>Die restlichen Layer liefern Infos über <b>Schneehöhe, Temperatur und Windrichtung</b></li>
-                <li>Am linken unteren Rand der Karte kann zudem ein aktuelles <b>Regenradar</b> eingeschalten werden</li>
+                <li>Am linken unteren Rand der Karte kann zudem ein aktuelles <b>Regenradar</b> eingeschalten werden
+                </li>
             </ul>
-                
+
             </p>
 
             <div id="map"></div>
@@ -115,15 +107,16 @@
 
         </article>
         </article>
-        <footer>
-            <strong>Datenquellen:</strong>
-            <nav>
-                <a href="https://lawinen.report/">Lawinen.report</a> |
-                <a href="https://static.avalanche.report/weather_stations/stations.geojson">GeoJSON Daten</a> |
-                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol">Metadaten</a>
-            </nav>
-        </footer>
     </main>
+    <footer>
+        <strong>Datenquellen:</strong>
+        <nav>
+            <a href="https://lawinen.report/">Lawinen.report</a> |
+            <a href="https://static.avalanche.report/weather_stations/stations.geojson">GeoJSON Daten</a> |
+            <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol">Metadaten</a>
+        </nav>
+    </footer>
+
 </body>
 
 </html>

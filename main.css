@@ -5,7 +5,6 @@
 body {
     font-family: "Open Sans", sans-serif;
     background-color: #E9EBE9;
-    max-width: 1280px;
     margin: auto;
 }
 
@@ -14,11 +13,11 @@ a {
 }
 
 header {
-    padding: 1em;
     text-align: center;
-    background: #6c93b357;
-    color: rgb(10, 0, 0);
+    background: #03A9F4;
+    color: white;
     font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
 }
 
 main {
@@ -26,28 +25,41 @@ main {
     margin: auto;
 }
 
-.nav-badge {
+.nav-element {
     display: inline-block;
-    padding: 0.4em;
-    border: 1px solid #6c93b357;
-    border-radius: 10px;
-    margin-right: 0.5em;
-    background-color: rgba(47, 100, 179, 0.2);
+    font-family: "Roboto";
+    font-size: 0.9rem;
+    font-weight: 900;
+    line-height: 2.7;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0;
 }
 
-.nav-badge-1 {
-    display: inline-block;
-    padding: 0.4em;
-    border: 1px solid #6c93b357;
-    border-radius: 10px;
-    margin-right: 0.5em;
-    background-color: rgba(47, 100, 179, 0.4);
+.nav-element-active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top: 2px solid white;
+    box-sizing: border-box;
 }
 
-.nav-github {
-    text-align: right;
-    font-size: 0.9em;
-    font-weight: bold;
+.nav-element-title {
+    border-right: 1px rgba(255, 255, 255, 0.5) solid;
+    padding-right: 1rem;
+    color: #01579B;
+}
+
+.nav-element-title:hover {
+    pointer-events: none;
+}
+
+.nav-element > a {
+    color: white;
+    text-decoration: none;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+}
+
+.nav-element:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 article {
