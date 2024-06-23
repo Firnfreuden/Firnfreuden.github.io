@@ -13,6 +13,9 @@ a {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     text-align: center;
     background: #03A9F4;
     color: white;
@@ -21,8 +24,19 @@ header {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
+}
+
+footer {
+
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+footer nav {
+    display: inline-block;
 }
 
 .nav-element {
@@ -138,14 +152,4 @@ article {
 .skitouren {
     --ele-area: rgb(38, 66, 38);
     --ele-bg: rgb(248, 248, 248);
-}
-
-footer {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.9em;
-    margin-top: 0.5em;
-}
-
-footer nav {
-    display: inline-block;
 }
