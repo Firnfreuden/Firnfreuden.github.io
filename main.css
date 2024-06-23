@@ -9,14 +9,8 @@ body {
     margin: auto;
 }
 
-/* styling der Links */
 a {
     color: rgb(69, 80, 91);
-}
-
-main {
-    max-width: 1200px;
-    margin: auto;
 }
 
 header {
@@ -25,6 +19,11 @@ header {
     background: #6c93b357;
     color: rgb(10, 0, 0);
     font-size: 15px;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
 }
 
 .nav-badge {
