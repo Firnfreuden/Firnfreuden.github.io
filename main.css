@@ -5,7 +5,7 @@
 /** Top-Level **/
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Nunito", "Open Sans", sans-serif;
     background-color: white;
     margin: auto;
 }
@@ -37,7 +37,6 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: white;
-    font-family: "Roboto", sans-serif;
     font-size: 0.9em;
     margin-top: 0.5em;
     box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 2px -1px;
@@ -53,9 +52,8 @@ footer nav {
 
 .nav-element {
     display: inline-block;
-    font-family: "Roboto";
     font-size: 0.9rem;
-    font-weight: 900;
+    font-weight: 500;
     line-height: 2.7;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -90,6 +88,15 @@ footer nav {
 
 /** hauptseite **/
 
+.colorfull-heading {
+    margin-bottom: 4rem;
+    font-size: 8rem;
+    background: -webkit-linear-gradient(0deg, #35b2e7, #2f0c98);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 hr {
     border-bottom-width: 0;
     border-color: rgba(0, 0, 0, 0.2);
@@ -120,6 +127,11 @@ td {
     font-size: 0.8rem;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px 0 0 0;
+}
+
+.rounded-img {
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 1px;
 }
 
 /* Entfernt Standard-Aufzählungspunkte */
