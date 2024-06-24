@@ -140,6 +140,10 @@ td {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 1px;
 }
 
+.space-after-nav {
+    margin-top: 5em;
+}
+
 .space-after-text {
     margin-bottom: 10em;
 }
@@ -150,9 +154,11 @@ td {
     padding: 0;
 }
 
+
 /* Stellt sicher, dass die Icons und der Text in einer Zeile sind */
 .custom-list li {
     margin: 10px 0;
+
 }
 
 /* Stellt sicher, dass das Icon und der Text nebeneinander angezeigt werden */
