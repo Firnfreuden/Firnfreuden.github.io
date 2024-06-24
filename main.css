@@ -140,8 +140,9 @@ td {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 1px;
 }
 
+/*Platz am oberen und unteren Rand, um Überlappungen zu vermeiden */
 .space-after-nav {
-    margin-top: 5em;
+    margin-top: 7em;
 }
 
 .space-after-text {
