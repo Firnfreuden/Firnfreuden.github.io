@@ -130,7 +130,8 @@ td {
     transform: translate(0, -115%);
     padding: 0.4rem;
     font-size: 0.8rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px 0 0 0;
 }
 
@@ -138,6 +139,7 @@ td {
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 1px;
 }
+
 
 /* Entfernt Standard-Aufzählungspunkte */
 .custom-list {
