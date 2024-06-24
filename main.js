@@ -98,9 +98,9 @@ omnivore.gpx('/skitouren_beschreibungen/gpx/atemkogel.gpx').addTo(themaLayer.rou
 omnivore.gpx('/skitouren_beschreibungen/gpx/finstertaler_schartenkogel.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/fluchtkogel.gpx').addTo(themaLayer.routes);
 // omnivore.gpx('/skitouren_beschreibungen/gpx/gabler.gpx').addTo(themaLayer.routes); // FALSCH
-// omnivore.gpx('/skitouren_beschreibungen/gpx/großglockner.gpx').addTo(themaLayer.routes);  // FALSVH
+omnivore.gpx('/skitouren_beschreibungen/gpx/großglockner.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/guslarspitze.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/skitouren_beschreibungen/gpx/hinterer_daunkogel_ueberschreitung.gpx').addTo(themaLayer.routes);  
+omnivore.gpx('/skitouren_beschreibungen/gpx/hinterer_daunkogel_ueberschreitung.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/hoher_seeblaskogel.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/innere_sommerwand.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/k2.gpx').addTo(themaLayer.routes);
@@ -108,12 +108,12 @@ omnivore.gpx('/skitouren_beschreibungen/gpx/kleiner_kaserer.gpx').addTo(themaLay
 omnivore.gpx('/skitouren_beschreibungen/gpx/laengentaler_weisserkogel.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/luesener_fernerkogel_luesener_spitze.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/reichenspitze.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/skitouren_beschreibungen/gpx/ruderhofspitze.gpx').addTo(themaLayer.routes); 
+omnivore.gpx('/skitouren_beschreibungen/gpx/ruderhofspitze.gpx').addTo(themaLayer.routes);
 // omnivore.gpx('/skitouren_beschreibungen/gpx/scheiberkogel.gpx').addTo(themaLayer.routes);  // falsch
 omnivore.gpx('/skitouren_beschreibungen/gpx/similaun.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/sulzkogel.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/wildspitze.gpx').addTo(themaLayer.routes);
-omnivore.gpx('/skitouren_beschreibungen/gpx/wurmtalerkopf.gpx').addTo(themaLayer.routes); 
+omnivore.gpx('/skitouren_beschreibungen/gpx/wurmtalerkopf.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/zischgenscharte.gpx').addTo(themaLayer.routes);
 omnivore.gpx('/skitouren_beschreibungen/gpx/zuckerhuetl.gpx').addTo(themaLayer.routes);
 
