@@ -1,91 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firnfreuden</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Firnfreuden</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Nunito font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
+        <!-- Nunito font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet">
 
-    <!-- eigene Stile und Hauptskript -->
-    <link rel="stylesheet" href="main.css">
-    <script defer src="main.js"></script>
+        <!-- eigene Stile und Hauptskript -->
+        <link rel="stylesheet" href="main.css">
+        <script defer src="main.js"></script>
 
-    <!-- Leaflet FullScreen -->
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
-        rel='stylesheet' />
-</head>
+        <!-- Leaflet FullScreen -->
+        <script
+            src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+            rel='stylesheet' />
+    </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="nav-element nav-element-title">
-                <i class="fa-regular fa-snowflake"></i>
-                Firnfreuden
-            </div>
-            <div class="nav-element  nav-element-active">
-                <a href="index.html">Startseite</a>
-            </div>
-            <div class="nav-element">
-                <a href="map.html">Übersichtskarte</a>
-            </div>
-            <div class="nav-element">
-                <a href="skitouren_beschreibungen/index.html">Skitouren</a>
-            </div>
-            <div class="nav-element">
-                <a href="about_us/index.html">Über Uns</a>
-            </div>
-            <div class="nav-element">
-                <a href="konzept.pdf" target="_blank">Konzept</a>
-            </div>
-            <div class="nav-element">
-                <a href="https://github.com/Firnfreuden/Firnfreuden.github.io/" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <article class="space-after-nav">
-            <h1 class="colorfull-heading"><i class="fa-regular fa-snowflake"></i> Firn<wbr />freud<wbr />en</h1>
-            <h2>Eine Planungsunterstützung für Frühjahrsskitouren</h2>
-            <h3>Johanna Mascher, Amelie Singler, Sophie Stoffl</h3>
-
-
-            <div class="space-after-text">
-                <p>
-                    Dieses Portal soll bei der Planung von Frühjahrsskitouren unterstützen.
-                    Auf der interaktiven Karte ist eine Übersicht über verschiedene Frühjahrsskitouren in Tirol zu
-                    finden.
-                    Außerdem finden sich auf der Seite "Skitouren" die dazugehörigen Eckdaten
-                    und Tourenbeschreibungen.
-                </p>
-            </div>
-
-        </article>
-    </main>
-    <footer>
-        <strong>Datenquellen:</strong>
-        <nav>
-            <a href="https://lawinen.report/">Lawinen.report</a> |
-            <a href="https://static.avalanche.report/weather_stations/stations.geojson">GeoJSON Daten</a> |
-            <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol">Metadaten</a>
-        </nav>
-
-    </footer>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-element nav-element-title">
+                    <i class="fa-regular fa-snowflake"></i>
+                    Firnfreuden
+                </div>
+                <div class="nav-element  nav-element-active">
+                    <a href="index.html">Startseite</a>
+                </div>
+                <div class="nav-element">
+                    <a href="map.html">Übersichtskarte</a>
+                </div>
+                <div class="nav-element">
+                    <a href="skitouren_beschreibungen/index.html">Skitouren</a>
+                </div>
+                <div class="nav-element">
+                    <a href="about_us/index.html">Über Uns</a>
+                </div>
+                <div class="nav-element">
+                    <a href="konzept.pdf" target="_blank">Konzept</a>
+                </div>
+                <div class="nav-element">
+                    <a href="https://github.com/Firnfreuden/Firnfreuden.github.io/" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <article class="space-after-nav">
+                <h1 class="colorfull-heading"><i class="fa-regular fa-snowflake"></i> Firn<wbr />freud<wbr />en</h1>
+                <h2>Eine Planungsunterstützung für Frühjahrsskitouren</h2>
+                <h3>Johanna Mascher, Amelie Singler, Sophie Stoffl</h3>
 
 
-</body>
+                <div class="space-after-text">
+                    <p>Die beste und schönste Zeit im Jahr zum Skitourengehen sind die Monate März bis Ende Mai im
+                        Frühling. Im Tal blühen die ersten Blumen, die Sonne ist schon stark und wärmt die müden Körper
+                        nach einer anstrengenden Tour, und die Gipfel glänzen noch im weißen Mantel. Nicht einmal das
+                        frühe Aufstehen kann einem die Vorfreude auf die nächste Skitour nehmen.</p>
+                    <p>
+                        Skitouren im Frühjahr unterscheiden sich in der Planung und Durchführung von Skitouren
+                        im Hochwinter. Klassische Frühjahrsskitouren sind oft länger und haben mehr Höhenmeter als viele
+                        Hochwinterskitouren. Deshalb und aufgrund der tageszeitlichen Erwärmung ist ein früher Start
+                        unumgänglich. Viele klassische Frühjahrsskitouren beinhalten eine Begehung von Gletschern und
+                        Graten, weshalb die entsprechende Ausrüstung wie Pickel, Steigeisen, Seil und Klettergurt nicht
+                        fehlen sollte.</p>
+                    <p>
+                        Dieses Portal soll bei der Planung von Frühjahrsskitouren unterstützen. Auf der interaktiven
+                        Karte ist eine Übersicht über einige ausgewählte Frühjahrsskitouren in Tirol zu finden. Außerdem
+                        werden relevante Planungsinformationen wie Wetter und Schneehöhe dargestellt. Auf der Seite
+                        "Skitouren" finden sich die dazugehörigen Eckdaten und Tourenbeschreibungen.
+                    </p>
+                </div>
+
+            </article>
+        </main>
+        <footer>
+            <strong>Datenquellen:</strong>
+            <nav>
+                <a href="https://lawinen.report/">Lawinen.report</a> |
+                <a href="https://static.avalanche.report/weather_stations/stations.geojson">GeoJSON Daten</a> |
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol">Metadaten</a>
+            </nav>
+
+        </footer>
+
+
+    </body>
 
 </html>
