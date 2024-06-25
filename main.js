@@ -248,8 +248,6 @@ let osmAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenSt
 let osm2 = new L.TileLayer(osmUrl, { minZoom: 0, maxZoom: 13, attribution: osmAttrib });
 let miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
 
-
-
 //funktion farben
 function getColor(value, ramp) {
     for (let rule of ramp) {
@@ -395,4 +393,10 @@ async function loadGeoJSONRoute() {
 
 // Aufruf der Funktion zum Laden der GeoJSON-Route
 loadGeoJSONRoute();
+
+// Leaflet Hash je nach zoom level sind in der url die Koordinaten vom Zoom wenn ich nicht die ganze karte z.B. versenden will
+var hash = new L.Hash(map);
+
+// Leaflet Locate damit man sich selber orten kann
+L.control.locate().addTo(map);
 

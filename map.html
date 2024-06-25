@@ -1,125 +1,142 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Firnfreuden Karte</title>
+        <title>Firnfreuden Karte</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Nunito font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- Nunito font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet">
 
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+        <!-- Leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+            integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
-    <!-- Leaflet Providers -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
-        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Leaflet Providers -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+            integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- leaflet Rainviewer-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.css" />
-    <script src="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.js"></script>
+        <!-- leaflet Rainviewer-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.css" />
+        <script src="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.js"></script>
 
-    <!-- Leaflet FullScreen -->
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
-        rel='stylesheet' />
+        <!-- Leaflet FullScreen -->
+        <script
+            src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+            rel='stylesheet' />
 
-    <!-- leaflet-elevation -->
-    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
-    <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
+        <!-- leaflet-elevation -->
+        <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
+        <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
 
-    <!-- Leaflet Minimap -->
-    <link rel="stylesheet" href="data/Control.MiniMap.css" />
-    <script src="data/Control.MiniMap.min.js" type="text/javascript"></script>
+        <!-- Leaflet Minimap -->
+        <link rel="stylesheet" href="data/Control.MiniMap.css" />
+        <script src="data/Control.MiniMap.min.js" type="text/javascript"></script>
 
-    <!-- Leaflet velocity-->
-    <script src="lib/leaflet-velocity.js"></script>
-    <link rel="stylesheet" href="lib/leaflet-velocity.css">
+        <!-- Leaflet velocity-->
+        <script src="lib/leaflet-velocity.js"></script>
+        <link rel="stylesheet" href="lib/leaflet-velocity.css">
 
-    <!-- Leaflet omnivore -->
-    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+        <!-- Leaflet omnivore -->
+        <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
 
-    <!-- eigene Stile und Hauptskript -->
-    <link rel="stylesheet" href="main.css">
-    <script src="color.js"></script>
-    <script defer src="main.js"></script>
-</head>
+        <!-- Leaflet Hash-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.min.js"
+            integrity="sha512-0A4MbfuZq5Au9EdpI1S5rUTXlibNBi8CuZ/X3ycwXyZiCjNzpiO9YH6EMqPgzZm6vfNCuZStBQHjnO17nIC0IQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<body>
+        <!-- Leaflet Locate -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.81.1/L.Control.Locate.min.js"
+            integrity="sha512-s/EGgrVhzEldZLssatR0N5oT6POS4r2ZwYa+sCXYrx8YMlKn9TQCIGTJS4c4O7w/u+bw32sNEyo+EPa+KDrw3Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.81.1/L.Control.Locate.css"
+            integrity="sha512-6+fQwheLeCW6sKV5liSHZ0rxcrN4TRBwWOhsof+3Iahu9J+WRyF4eBLjL5QshWxja6WiKE1WAtrH0hsRJ3nA8A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <header>
-        <nav>
-            <div class="nav-element nav-element-title">
-                <i class="fa-regular fa-snowflake"></i>
-                Firnfreuden
-            </div>
-            <div class="nav-element">
-                <a href="index.html">Startseite</a>
-            </div>
-            <div class="nav-element nav-element-active">
-                <a href="map.html">Übersichtskarte</a>
-            </div>
-            <div class="nav-element">
-                <a href="skitouren_beschreibungen/index.html">Skitouren</a>
-            </div>
-            <div class="nav-element">
-                <a href="about_us/index.html">Über Uns</a>
-            </div>
-            <div class="nav-element">
-                <a href="konzept.pdf" target="_blank">Konzept</a>
-            </div>
-            <div class="nav-element">
-                <a href="https://github.com/Firnfreuden/Firnfreuden.github.io/" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <article class="space-after-nav">
-            <p>Auf dieser Seite findet ihr Informationen zu Tourenbedingungen sowie einige Tourenideen.
-            <ul>
-                <li>Um aktuelle Stationsdaten zu erhalten: <b>Wetterstationslayer</b> anschalten und die gewüschte
-                    Station auf der Karte anklicken</li>
-                <li>Für aktuelle Wettervorhersagen: Layer "<b>Wettervorhersage MET Norway</b>" anschalten und gewüschten
-                    Ort auf der Karte anklicken</li>
-                <li>Um alle Skitouren aus der Sammlung in der Karte anzuzeigen: Layer "<b>Skitouren</b>" anschalten,
-                    dann gewüschte Skitour anklicken für mehr Infos</li>
-                <li>Die restlichen Layer liefern Infos über <b>Schneehöhe, Temperatur und Windrichtung</b></li>
-                <li>Am linken unteren Rand der Karte kann zudem ein aktuelles <b>Regenradar</b> eingeschalten werden
-                </li>
-            </ul>
+        <!-- eigene Stile und Hauptskript -->
+        <link rel="stylesheet" href="main.css">
+        <script src="color.js"></script>
+        <script defer src="main.js"></script>
+    </head>
 
-            </p>
+    <body>
 
-            <div id="map"></div>
-            <div id="profile"></div>
+        <header>
+            <nav>
+                <div class="nav-element nav-element-title">
+                    <i class="fa-regular fa-snowflake"></i>
+                    Firnfreuden
+                </div>
+                <div class="nav-element">
+                    <a href="index.html">Startseite</a>
+                </div>
+                <div class="nav-element nav-element-active">
+                    <a href="map.html">Übersichtskarte</a>
+                </div>
+                <div class="nav-element">
+                    <a href="skitouren_beschreibungen/index.html">Skitouren</a>
+                </div>
+                <div class="nav-element">
+                    <a href="about_us/index.html">Über Uns</a>
+                </div>
+                <div class="nav-element">
+                    <a href="konzept.pdf" target="_blank">Konzept</a>
+                </div>
+                <div class="nav-element">
+                    <a href="https://github.com/Firnfreuden/Firnfreuden.github.io/" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <article class="space-after-nav">
+                <p>Auf dieser Seite findet ihr Informationen zu Tourenbedingungen sowie einige Tourenideen.
+                <ul>
+                    <li>Um aktuelle Stationsdaten zu erhalten: <b>Wetterstationslayer</b> anschalten und die gewüschte
+                        Station auf der Karte anklicken</li>
+                    <li>Für aktuelle Wettervorhersagen: Layer "<b>Wettervorhersage MET Norway</b>" anschalten und
+                        gewüschten
+                        Ort auf der Karte anklicken</li>
+                    <li>Um alle Skitouren aus der Sammlung in der Karte anzuzeigen: Layer "<b>Skitouren</b>" anschalten,
+                        dann gewüschte Skitour anklicken für mehr Infos</li>
+                    <li>Die restlichen Layer liefern Infos über <b>Schneehöhe, Temperatur und Windrichtung</b></li>
+                    <li>Am linken unteren Rand der Karte kann zudem ein aktuelles <b>Regenradar</b> eingeschalten werden
+                    </li>
+                </ul>
 
-        </article>
-    </main>
-    <footer>
-        <strong>Datenquellen:</strong>
-        <nav>
-            <a href="https://lawinen.report/">Lawinen.report</a> |
-            <a href="https://static.avalanche.report/weather_stations/stations.geojson">GeoJSON Daten</a> |
-            <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol">Metadaten</a>
-        </nav>
-    </footer>
+                </p>
 
-</body>
+                <div id="map"></div>
+                <div id="profile"></div>
+
+            </article>
+        </main>
+        <footer>
+            <strong>Datenquellen:</strong>
+            <nav>
+                <a href="https://lawinen.report/">Lawinen.report</a> |
+                <a href="https://static.avalanche.report/weather_stations/stations.geojson">GeoJSON Daten</a> |
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol">Metadaten</a>
+            </nav>
+        </footer>
+
+    </body>
 
 </html>
